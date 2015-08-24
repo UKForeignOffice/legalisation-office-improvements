@@ -1,0 +1,50 @@
+{{<layout}}
+
+{{$pageTitle}}
+GOV.UK prototyping kit
+{{/pageTitle}}
+
+{{$content}}
+
+<main id="content" role="main">
+    {{>pagehead}}
+
+    <h1 class="heading-xlarge">Countries</h1>
+    <p class="text">
+        Please state the countries (overseas) where the documents are to be used, as well as the number of documents.
+    </p>
+
+    <div class="form-group">
+        <form>
+            <fieldset class="inline">
+                <div id="countries-list">
+                    <div id="row">
+                        <div class="col1">
+                            <label for="otherCountries[1]">Country name</label>
+                            <input type="text" id="otherCountries[1]" name="otherCountries[1]" value="" autocomplete="off" class="text country-autocomplete long validate tt-query" style="position: relative; vertical-align: top; background-color: transparent;">
+                        </div>
+                        <div class="col2">
+                            <label for="otherCountriesNumer[1]">No. of documents</label>
+                            <input type="number" id="otherCountriesNumer[1]" name="otherCountriesNumber[1]" value="" class="number"/>
+                        </div>
+                        <div id="remove-control">
+                            <a href id="remScnt">Remove</a>
+                        </div>
+                    </div>
+                </div>
+
+                <h2><a href="#" id="addScnt">Add Another Input Box</a></h2>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="form-group">
+        <a href="index" class="button">Save and continue</a>
+        <p><a href="application_form_payment" class="link-back">Back</a></p>
+    </div>
+
+</main>
+
+{{/content}}
+
+{{/layout}}
