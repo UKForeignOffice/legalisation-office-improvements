@@ -9,17 +9,27 @@ GOV.UK prototyping kit
 <main id="content" role="main">
     {{>pagehead}}
 
-    <div class="form-group">
+    <div class="form-group" style="width: 65%;margin-top: 20px;">
         <div class="container-confirmed container">
-            <h1 class="heading-large confirmed">Applicaiton complete</h1>
-            <h2 class="heading-secondary confirmed">Your reference number is</h2>
-            <h1 class="heading-large confirmed">HDJ2123F</h1>
+            <h1 class="heading-large confirmed" style="margin-top: 25px"><i class="flaticon-checked21"></i>Application complete</h1>
+            <h2 class="heading-secondary confirmed ">Your reference number is</h2>
+            <h1 class="heading-large confirmed reference">HDJ2123F</h1>
         </div>
     </div>
 
+    <div class="form-group" style="padding: 10px 0 8px 0;border-bottom: 1px solid #bfc1c3;width: 65%;margin-bottom: -10px;">
+        <div><i class="flaticon-new100"></i>We have sent you a confirmation email.</div>
+    </div>
+
+    <div class="form-group" style="display: block; float: left;  clear: both; width:65%">
+        <div class="heading-medium">What happens next?</div>
+        <p>We've recorded your application and will begin processing it shortly.</p>
+        <p>We will contact you either to confirm your registration, or to ask for more information.</p>
+        <p>If you have any questions about your application, <a href="#">contact us</a>.</p>
+    </div>
     <div class="form-group">
-        <a href="application_form_personal_details" class="button">Finished</a>
-        <p><a href="index" class="link-back">Back</a></p>
+        <a href="index" class="button">Finished</a>
+        <p><a href="application_form_payment" class="link-back">Back</a></p>
     </div>
 
 </main>
