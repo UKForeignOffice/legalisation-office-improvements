@@ -10,8 +10,8 @@ module.exports = {
         });
 
         // add your routes here
-        app.get('application_form_start', function (req, res) {
-            res.render('application_form_start', {'message' : 'Hello world' , 'text' : 'Oh dear'});
+        app.get('application_form_personal_details', function (req, res) {
+            res.render('application_form_personal_details', {'message' : 'Hello world' , 'text' : 'Oh dear'});
         });
 
         app.get('application_form_address', function (req, res) {
@@ -25,8 +25,8 @@ module.exports = {
         app.get('application_form_fail_address', function (req, res) {
             res.render('application_form_fail_address', {'message' : 'Hello world' , 'text' : 'Oh dear'});
         });
-        app.get('application_confirmation', function (req, res) {
-            res.render('application_form_fail_address', {'message' : 'Hello world' , 'text' : 'Oh dear'});
+        app.get('application_form_confirmation', function (req, res) {
+            res.render('application_form_confirmation', {'message' : 'Hello world' , 'text' : 'Oh dear'});
         });
 
 
