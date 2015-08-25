@@ -1517,6 +1517,47 @@ a:visited {
   background-position: 100% 50%;
   background-repeat: no-repeat; }
 
+.col1, .col2 {
+  display: block;
+  float: left;
+  margin-right: 20px; }
+
+#remove-control {
+  overflow: hidden;
+  width: auto;
+  padding-top: 36px;
+  margin-bottom: 30px; }
+
+input.text {
+  text-transform: none !important;
+  border: 1px solid #bbb !important;
+  margin: 0 !important;
+  padding: 0.5em !important;
+  width: 320px !important;
+  clear: both !important;
+  display: block !important;
+  font-family: "nta", Arial, sans-serif !important;
+  height: 47px !important;
+  font-size: 19px !important; }
+
+input.number {
+  text-transform: none;
+  border: 1px solid #bbb;
+  margin: 0 0 1em;
+  padding: 0.5em;
+  width: 100px;
+  clear: both;
+  display: block; }
+
+#addScnt {
+  display: block;
+  float: left;
+  clear: both; }
+
+.typeahead-list {
+  font-family: "nta", Arial, sans-serif !important;
+  font-size: 19px !important; }
+
 .warning {
   background: url("https://assets.registertovote.service.gov.uk/assets/images/icon-important.png") no-repeat scroll 0 0.5em;
   padding-left: 3em; }
