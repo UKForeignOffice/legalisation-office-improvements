@@ -169,22 +169,21 @@ $(function() {
     $('body').on('click', '#addScnt', function() {
         $('<div id="row">'+
         '<div class="col1"> ' +
-        '<label for="otherCountries">Country name</label>' +
+        '<label for="otherCountries[1]">Country name</label>' +
         '<div class="typeahead-container">' +
         '<div class="typeahead-field">' +
         '<span class="typeahead-query">' +
-            '<input type="text" id="otherCountries" name="otherCountries" value="" autocomplete="off" class="text country-autocomplete long validate tt-query" style="position: relative; vertical-align: top; background-color: transparent;">' +
+        '<input type="text" id="otherCountries" name="otherCountries" value="" autocomplete="off" class="text country-autocomplete long validate tt-query" style="position: relative; vertical-align: top; background-color: transparent;">' +
         '</span>' +
         '</div>' +
         '</div>' +
         '</div>' +
         '<div class="col2">' +
-        '<label for="otherCountriesNumer">No. of documents</label>' +
-        '<input type="number" id="otherCountriesNumer" name="otherCountriesNumber" value="" class="number"/>' +
+        '<label for="otherCountriesNumber">No. of documents</label>' +
+        '<input type="number" id="otherCountriesNumber" name="otherCountriesNumber" value="" class="number"/>' +
         '</div>' +
         '<div id="remove-control"><a href id="remScnt">Remove</a></div>' +
         '</div>').appendTo(scntDiv);
-
         i++;
         return false;
     });
@@ -203,6 +202,7 @@ $(function() {
     });
 });
 
+
 $(document).on('change blur', '.number', function () {
     var sum = 0;
     $('body').find('.number').each(function () {
@@ -211,8 +211,7 @@ $(document).on('change blur', '.number', function () {
     $('#total').text(sum);
 });
 
-$('body').find('#otherCountries').each(function () {
-$(this).typeahead({
+$('#otherCountries').typeahead({
     order: "desc",
     source: {
         data: [
@@ -248,4 +247,4 @@ $(this).typeahead({
             console.log('Typeahead Initiated on ' + node.selector);
         }
     }
-})});
+});
