@@ -211,7 +211,7 @@ $(document).on('change blur', '.number', function () {
     $('#total').text(sum);
 });
 
-$('#country_v1-query').typeahead({
+$('#otherCountries').typeahead({
     order: "desc",
     source: {
         data: [
