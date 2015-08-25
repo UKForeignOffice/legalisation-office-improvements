@@ -26,7 +26,10 @@ module.exports = {
             res.render('application_form_fail_address', {'message' : 'Hello world' , 'text' : 'Oh dear'});
         });
         app.get('application_form_confirmation', function (req, res) {
-            res.render('application_form_confirmation', {'message' : 'Hello world' , 'text' : 'Oh dear'});
+            res.render('application_form_confirmation', {'address' : '2 Burlington Court, Burlington Road, Altrincham, Trafford WA141JT' , 'text' : 'Oh dear'});
+        });
+        app.get('application_eligibility', function (req, res) {
+            res.render('application_eligibility', {'address' : '2 Burlington Court, Burlington Road, Altrincham, Trafford WA141JT' , 'text' : 'Oh dear'});
         });
 
 
