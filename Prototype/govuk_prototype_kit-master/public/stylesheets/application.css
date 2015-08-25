@@ -1523,3 +1523,44 @@ a:visited {
 
 .warning p {
   font-weight: 600; }
+
+.change {
+  color: #0b0c0c;
+  position: relative;
+  float: right;
+  margin-top: 0;
+  display: inline-block;
+  padding: 0.35em 0.5em 0.15em 0.5em;
+  border: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+  box-shadow: 0 2.5px 0 #b5babe;
+  font-size: 0.9em;
+  line-height: 1.25;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  overflow: hidden;
+  top: 0;
+  right: 0; }
+
+a.change {
+  color: #0b0c0c !important; }
+
+.summary_block {
+  max-width: 30em;
+  border-top: 1px solid #dee0e2;
+  padding: 1em 0.5em 1em 0em; }
+
+.summary_group {
+  width: 32%;
+  display: inline-block;
+  vertical-align: text-top; }
+
+.change, .change:hover, .change:focus, .change:visited {
+  color: #0b0c0c;
+  background: #d0d3d6; }
+
+.summary_block h3 {
+  width: 33%;
+  display: inline-block; }
