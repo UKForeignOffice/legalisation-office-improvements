@@ -9,14 +9,20 @@ GOV.UK prototyping kit
 <main id="content" role="main">
     {{>pagehead}}
 
-    <h1 class="heading-xlarge">Countries</h1>
+    <h1 class="heading-xlarge">Document Details</h1>
     <p class="text">
         Please state the countries (overseas) where the documents are to be used, as well as the number of documents.
     </p>
 
     <div class="form-group">
+        <label for="solicitor-name">Solicitor name</label>
+        <input id="solicitor-name" type="text" class="text long"/>
+    </div>
+    <div class="form-group">
         <form>
             <fieldset class="inline">
+                <legend>Countries</legend>
+            <div class="panel-indent">
                 <div id="countries-list">
                     <div id="row">
                         <div class="col1">
@@ -38,7 +44,7 @@ GOV.UK prototyping kit
                         </div>
                     </div>
                 </div>
-
+                </div>
                 <a href="#" id="addScnt">Add another country</a>
 
             </fieldset>

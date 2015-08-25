@@ -157,12 +157,12 @@
   margin-bottom: 30px;
 }
 
-input.text {
+#otherCountries {
   text-transform: none !important;
   border: 1px solid #bbb !important;
   margin: 0 !important;
   padding: 0.5em !important;
-  width: 320px !important;
+//  width: 320px !important;
   clear: both !important;
   display: block !important;
   font-family: "nta", Arial, sans-serif !important;
@@ -170,7 +170,7 @@ input.text {
   font-size: 19px !important;
 }
 
-input.number {
+input.number, #solicitor-name {
   text-transform: none;
   border: 1px solid #bbb;
   margin: 0 0 1em;
@@ -178,6 +178,10 @@ input.number {
   width: 100px;
   clear: both;
   display: block;
+}
+
+#solicitor-name {
+  width: 440px;
 }
 
 #addScnt {
