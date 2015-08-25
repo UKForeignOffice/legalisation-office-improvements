@@ -1,0 +1,43 @@
+{{<layout}}
+
+{{$pageTitle}}
+GOV.UK prototyping kit
+{{/pageTitle}}
+
+{{$content}}
+
+<main id="content" role="main">
+    {{>pagehead}}
+
+    <h1 class="heading-xlarge">Choose a service</h1>
+
+    <div class="form-group">
+        <form>
+            <legend>
+                Please choose a service for your document delivery.
+            </legend>
+            <fieldset class="inline">
+                <div class="form-group form-group-compound">
+                    <label class="block-label"  for="radio-indent-1">
+                        <input id="radio-indent-1" type="radio" name="radio-indent-group" value="Business">
+                        Standard Postal Service
+                    </label>
+                    <label class="block-label" data-target="different-address-section" for="radio-indent-2">
+                        <input id="radio-indent-2" type="radio" name="radio-indent-group" value="Personal">
+                        Business Service
+                    </label>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="form-group">
+        <a href="application_form_personal_details" class="button">Save and continue</a>
+        <p><a href="index" class="link-back">Back</a></p>
+    </div>
+
+</main>
+
+{{/content}}
+
+{{/layout}}
