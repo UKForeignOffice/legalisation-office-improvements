@@ -1516,3 +1516,10 @@ a:visited {
   background-image: url(https://assets.digital.cabinet-office.gov.uk/static/icon-pointer-d08eb64ed45dc2c67426f62694b5e84b.png);
   background-position: 100% 50%;
   background-repeat: no-repeat; }
+
+.warning {
+  background: url("https://assets.registertovote.service.gov.uk/assets/images/icon-important.png") no-repeat scroll 0 0.5em;
+  padding-left: 3em; }
+
+.warning p {
+  font-weight: 600; }

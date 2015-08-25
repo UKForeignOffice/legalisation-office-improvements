@@ -25,6 +25,10 @@ module.exports = {
         app.get('application_form_fail_address', function (req, res) {
             res.render('application_form_fail_address', {'message' : 'Hello world' , 'text' : 'Oh dear'});
         });
+        app.get('application_confirmation', function (req, res) {
+            res.render('application_form_fail_address', {'message' : 'Hello world' , 'text' : 'Oh dear'});
+        });
+
 
     }
 };
