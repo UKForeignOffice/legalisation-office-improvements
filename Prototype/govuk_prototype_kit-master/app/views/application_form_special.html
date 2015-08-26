@@ -1,0 +1,60 @@
+{{<layout}}
+
+{{$pageTitle}}
+Additional Information
+{{/pageTitle}}
+
+{{$content}}
+
+<main id="content" role="main">
+    {{>pagehead}}
+
+    <h1 class="heading-xlarge">Additional Information</h1>
+
+    <div class="form-group">
+        <h2 class="heading-small">Special Instructions</h2>
+        <span class="form-hint">Please let us know of any additional details that are relevant to your application</span>
+        <textarea class="form-control" id="instructions" type="text" cols="40" rows="5"></textarea>
+    </div>
+
+    <form class="form-group">
+        <fieldset class="inline">
+            <legend>
+            <h2 class="heading-small">Your reference</h2>
+            <span class="form-hint">If you have your own internal reference number you can enter it here</span>
+            </legend>
+            <input class="form-control" id="customer-reference" type="text">
+        </fieldset>
+    </form>
+
+    <div class="form-group">
+        <label class="heading-small" >Feedback Consent</label>
+       <p>We are continually looking at ways to improve our customer service. In order to help us achieve this, we will be asking our customers to complete a short
+           survey which will be sent to the e-mail address supplied with the application. Please indicate if you would be happy to take part?</p>
+
+        <form>
+            <fieldset class="inline">
+                <label class="block-label" for="radio-inline-1">
+                    <input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes">
+                    I Accept
+                </label>
+                <label class="block-label" for="radio-inline-2">
+                    <input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">
+                    I do not wish to take part
+                </label>
+            </fieldset>
+        </form>
+    </div>
+
+
+
+    <div class="form-group">
+        <a href="application_form_summary" class="button">Save and continue</a>
+        <p><a href="application_form_postage" class="link-back">Back</a></p>
+    </div>
+
+</main>
+
+{{/content}}
+
+{{/layout}}

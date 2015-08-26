@@ -2456,7 +2456,7 @@ a:visited {
   clear: both !important;
   display: block !important;
   font-family: "nta", Arial, sans-serif !important;
-  height: 47px !important;
+  height: 25px !important;
   font-size: 19px !important; }
 
 input.number, #solicitor-name {
@@ -2516,7 +2516,7 @@ a.change {
   padding: 1em 0.5em 1em 0em; }
 
 .summary_group {
-  width: 32%;
+  width: 45%;
   display: inline-block;
   vertical-align: text-top; }
 
@@ -2527,6 +2527,9 @@ a.change {
 .summary_block h3 {
   width: 33%;
   display: inline-block; }
+
+.hide {
+  display: none; }
 
 .container-confirmed {
   color: white;
