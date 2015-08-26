@@ -14,24 +14,16 @@ Address Details
     <h3 class="heading-medium">Where would you like your legalised documents to be returned?</h3>
 
     <div class="form-group">
-        <label class="form-label" for="building">Building or street</label>
-        <input class="form-control" id="building" type="text">
+        <label class="form-label" for="name">Full name</label>
+        <input class="form-control" id="name" type="text">
     </div>
-    <div class="form-group">
-        <label class="form-label" for="city">Town or city</label>
-        <input class="form-control" id="city" type="text">
-    </div>
-    <div class="form-group">
-        <label class="form-label" for="county">County</label>
-        <input class="form-control" id="county" type="text">
-    </div>
+
     <div class="form-group">
         <label class="form-label" for="postcode">Postcode</label>
-        <input class="form-control" id="postcode" type="text">
+        <input class="text postcode" id="postcode" type="text">
     </div>
     <div class="form-group">
-        <label class="form-label" for="country">Country</label>
-        <input class="form-control" id="country" type="text">
+        <a href="#" class="button">Find address</a>
     </div>
 
     <!-- Alternative Return Address-->
@@ -51,7 +43,13 @@ Address Details
                         Different address
                     </label>
                 </div>
+
+
                 <div class="panel-indent js-hidden" id="different-address-section">
+                    <div class="form-group">
+                        <label class="form-label" for="alt_name">Full name</label>
+                        <input class="form-control" id="alt_name" type="text">
+                    </div>
                     <div class="form-group">
                         <label class="form-label" for="alt_building">Building or street</label>
                         <input class="form-control" id="alt_building" type="text">
