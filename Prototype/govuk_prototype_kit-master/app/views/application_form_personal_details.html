@@ -13,22 +13,22 @@ Personal Details
     <!-- feel free to change this page to suit your needs -->
 
     <div class="form-group">
-        <label class="form-label" for="first-name">First name</label>
+        <span class="form-label-bold">Full name</span>
+        <span class="form-hint">As shown on your birth certificate or passport</span>
         <input class="form-control" id="first-name" type="text">
     </div>
 
     <div class="form-group">
-        <label class="form-label" for="last-name">Last name</label>
-        <input class="form-control" id="last-name" type="text">
-    </div>
-
-    <div class="form-group">
-        <label class="form-label" for="ptelephone"> Telephone</label>
-        <input class="form-control" id="ptelephone" type="text">
+        <span class="form-label-bold">Telephone number</span>
+        <span class="form-hint">Can be landline or mobile. Find your international code from the selector.</span>
+        <input type="tel" id="phone" class="form-control" autocomplete="off"  style="width: 100%">
+        <!--<span id="valid-msg" class="hide">✓ Valid</span>-->
+        <!--<span id="error-msg" class="hide">Invalid number</span>-->
     </div>
     <div class="form-group">
-        <label class="form-label" for="pemail"> Email</label>
-        <input class="form-control" id="pemail" type="text">
+        <span class="form-label-bold">Email address</span>
+        <span class="form-hint">As shown on your birth certificate or passport</span>
+        <input class="form-control" id="email" type="text">
     </div>
 
 
