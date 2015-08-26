@@ -1,0 +1,50 @@
+{{<layout}}
+
+{{$pageTitle}}
+Return Delivery
+{{/pageTitle}}
+
+{{$content}}
+
+<main id="content" role="main">
+    {{>pagehead}}
+
+    <h1 class="heading-xlarge">Postage</h1>
+    <p class="text">
+        Please select a delivery method for the return of your legalised documents
+    </p>
+
+    <form class="form-group">
+        <span class="form-hint">Note: the following countries are classed as International rather than Europe:
+            Albania, Armenia, Azerbaijan, Belarus, Bosnia and Herzegovina, Georgia, Liechtenstein, Kazakhstan,
+            Macedonia, Moldova, Montenegro, Russia, Serbia, Turkey and Ukraine</span>
+        <label class="block-label" for="radio-1">
+            <input id="radio-1" type="radio" name="radio-group" value="RoyalMail">
+            Standard Royal Mail (including British Forces Post Office) - £5.50
+        </label>
+        <label class="block-label" for="radio-2">
+            <input id="radio-2" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
+            European Courier - £14.50
+        </label>
+        <label class="block-label" for="radio-3">
+            <input id="radio-3" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
+            International Courier - £25.00
+        </label>
+
+        <label class="block-label" for="radio-4">
+            <input id="radio-4" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
+            Pre-paid stamped, addressed, A4-sized envelope - Free
+        </label>
+    </form>
+
+
+    <div class="form-group">
+        <a href="application_form_special" class="button">Save and continue</a>
+        <p><a href="application_form_countries" class="link-back">Back</a></p>
+    </div>
+
+</main>
+
+{{/content}}
+
+{{/layout}}
