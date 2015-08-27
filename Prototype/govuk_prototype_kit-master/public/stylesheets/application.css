@@ -2516,7 +2516,8 @@ a.change {
   padding: 1em 0.5em 1em 0em; }
 
 .summary_group {
-  width: 32%;
+  width: 45%;
+  padding-left: 20px;
   display: inline-block;
   vertical-align: text-top; }
 
@@ -2526,7 +2527,8 @@ a.change {
 
 .summary_block h3 {
   width: 33%;
-  display: inline-block; }
+  display: inline-block;
+  vertical-align: top; }
 
 .container-confirmed {
   color: white;
