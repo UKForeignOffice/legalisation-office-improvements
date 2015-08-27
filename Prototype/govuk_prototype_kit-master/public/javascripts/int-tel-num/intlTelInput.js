@@ -35,7 +35,7 @@
             // display only these countries
             onlyCountries: [],
             // the countries at the top of the list. defaults to united states and united kingdom
-            preferredCountries: [ "us", "gb" ],
+            preferredCountries: [ "gb", "fr", "es" ],
             // specify the path to the libphonenumber script to enable validation/formatting
             utilsScript: ""
         }, keys = {
