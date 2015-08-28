@@ -250,6 +250,24 @@ $('#otherCountries').typeahead({
 });
 
 
+$("#phone").intlTelInput({
+    defaultCountry: "auto",
+    geoIpLookup: function(callback) {
+        $.get('http://ipinfo.io', function() {}, "jsonp").always(function(resp) {
+            var countryCode = (resp && resp.country) ? resp.country : "";
+            callback(countryCode);
+        });
+    },
+    utilsScript: "public/javascripts/int-tel-num/utils.js" // just for formatting/placeholders etc
+});
+
+
+//Mailcheck code
+
+$.getScript("mailcheck/mailcheck.min.js", function(){
+
+});
+
 var domains = ['gmail.com', 'aol.com'];
 var secondLevelDomains = ['hotmail']
 var topLevelDomains = ["com", "net", "org"];
