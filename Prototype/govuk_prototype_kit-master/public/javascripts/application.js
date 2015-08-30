@@ -203,7 +203,7 @@ $(function() {
 });
 
 
-$(document).on('change blur', '.number', function () {
+$(document).on('change blur keydown paste input', '.number', function () {
     var sum = 0;
     $('body').find('.number').each(function () {
         sum += Number($(this).val());
