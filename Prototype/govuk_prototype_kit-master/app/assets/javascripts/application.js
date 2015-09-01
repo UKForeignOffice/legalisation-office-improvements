@@ -200,6 +200,9 @@ $(function() {
         }
         return false;
     });
+
+    $( "#tabs" ).tabs();
+    $("section.more").tabs();
 });
 
 
@@ -290,4 +293,8 @@ $('#email').on('blur', function() {
             // callback code
         }
     });
+});
+
+$(function() {
+    $( "#tabs" ).tabs();
 });
