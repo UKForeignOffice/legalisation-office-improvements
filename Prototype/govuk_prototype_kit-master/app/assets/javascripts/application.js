@@ -298,3 +298,8 @@ $('#email').on('blur', function() {
 $(function() {
     $( "#tabs" ).tabs();
 });
+
+
+function showOption(id) {
+    $(id).addClass("in");
+}

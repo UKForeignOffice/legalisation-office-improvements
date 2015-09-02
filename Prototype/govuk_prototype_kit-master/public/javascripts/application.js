@@ -200,6 +200,9 @@ $(function() {
         }
         return false;
     });
+
+    $( "#tabs" ).tabs();
+    $("section.more").tabs();
 });
 
 
@@ -291,3 +294,12 @@ $('#email').on('blur', function() {
         }
     });
 });
+
+$(function() {
+    $( "#tabs" ).tabs();
+});
+
+function showOption(id) {
+    $('#'+id).addClass("in");
+    console.log("hello");
+}
