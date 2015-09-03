@@ -1,0 +1,89 @@
+{{<layout}}
+
+{{$pageTitle}}
+Address Details
+{{/pageTitle}}
+
+{{$content}}
+
+<main id="content" role="main">
+    {{>pagehead}}
+
+    <h1 class="heading-xlarge">Your address details</h1>
+
+    <h3 class="heading-medium">Where would you like your legalised documents to be returned?</h3>
+
+    <div class="form-group">
+        <label class="form-label" for="name">Full name</label>
+        <input class="form-control" id="name" type="text">
+    </div>
+
+    <div class="form-group">
+        <label class="form-label" for="postcode">Postcode</label>
+        <input class="text postcode" id="postcode" type="text">
+    </div>
+    <div class="form-group">
+        <a href="#" class="button">Find address</a>
+    </div>
+
+    <!-- Alternative Return Address-->
+    <p class="text">Where would you like us to return your documents in the event
+                      that we are unable to successfully complete your application</p>
+
+    <div class="form-group">
+        <form>
+            <fieldset class="inline">
+                <div class="form-group form-group-compound">
+                    <label class="block-label"  for="radio-indent-1">
+                        <input id="radio-indent-1" type="radio" name="radio-indent-group" value="Business">
+                        Same as above
+                    </label>
+                    <label class="block-label" data-target="different-address-section" for="radio-indent-2">
+                        <input id="radio-indent-2" type="radio" name="radio-indent-group" value="Personal">
+                        Different address
+                    </label>
+                </div>
+
+
+                <div class="panel-indent js-hidden" id="different-address-section">
+                    <div class="form-group">
+                        <label class="form-label" for="alt_name">Full name</label>
+                        <input class="form-control" id="alt_name" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="alt_building">Building or street</label>
+                        <input class="form-control" id="alt_building" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="alt_city">Town or city</label>
+                        <input class="form-control" id="alt_city" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="alt_county">County</label>
+                        <input class="form-control" id="alt_county" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="alt_postcode">Postcode</label>
+                        <input class="form-control" id="alt_postcode" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="alt_country">Country</label>
+                        <input class="form-control" id="alt_country" type="text">
+                    </div>
+
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    
+
+    <div class="form-group">
+        <a href="application_form_countries" class="button">Next</a>
+        <p><a href="application_form_personal_details" class="link-back">Back</a></p>
+    </div>
+
+</main>
+
+{{/content}}
+
+{{/layout}}

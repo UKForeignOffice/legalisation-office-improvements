@@ -1,0 +1,92 @@
+<!-- Javascript -->
+
+<script src="/public/javascripts/jquery-1.11.3.js"></script>
+<script src="/public/javascripts/jquery.typeahead.js"></script>
+<script src="/public/javascripts/jquery-ui.js"></script>
+
+<!-- govuk_frontend_toolkit js -->
+<script src="{{assetPath}}javascripts/vendor/polyfills/bind.js"></script>
+<script src="{{assetPath}}javascripts/govuk/selection-buttons.js"></script>
+
+<!-- govuk_elements js -->
+<script src="{{assetPath}}javascripts/details.polyfill.js"></script>
+<script src="{{assetPath}}javascripts/application.js"></script>
+
+<!-- Boot Strap -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<!-- MailCheck -->
+<script src="{{assetPath}}javascripts/mailcheck/mailcheck.min.js"></script>
+
+<script type="text/javascript">
+    var $email = $('#email');
+    var $email_hint = $("#email_hint");
+    var $confirm_email =$('#email-confirm');
+    var $email_confirm_hint = $("#email_confirm_hint");
+
+
+    $email.on('blur',function() {
+        $email_hint.css('display', 'none').empty();
+        $(this).mailcheck({
+            suggested: function(element, suggestion) {
+                if(!$email_hint.html()) {
+                    // First error - fill in/show entire hint element
+                    var suggestion = "Did you mean <span class='suggestion'>" +
+                            "<span class='address'>" + suggestion.address + "</span>"
+                            + "@<a href='#' class='domain'>" + suggestion.domain +
+                            "</a></span>?";
+
+                    $email_hint.html(suggestion).fadeIn(150);
+                } else {
+                    // Subsequent errors
+                    $(".address").html(suggestion.address);
+                    $(".domain").html(suggestion.domain);
+                }
+            }
+        });
+    });
+
+
+    $email_hint.on('click', '.domain', function() {
+        // On click, fill in the field with the suggestion and remove the hint
+        $email.val($(".suggestion").text());
+        $email_hint.fadeOut(200, function() {
+            $(this).empty();
+        });
+        return false;
+    });
+
+    $confirm_email.on('blur',function() {
+            var Eml1 = document.getElementById("email").value;
+            var Eml2 = document.getElementById("email-confirm").value;
+            console.log($confirm_email.html())
+            if (Eml1 != Eml2) {
+                var email_warning = 'Addresses do not match';
+                $email_confirm_hint.html(email_warning).fadeIn(150);
+                $("#confirm_email_div").addClass('error_div');
+
+            }
+            else {
+                $email_confirm_hint.css('display', 'none').empty();
+                $("#confirm_email_div").removeClass('error_div');
+            }
+    });
+
+</script>
+
+<!-- INT-TEL-NUM-->
+<script src="{{assetPath}}javascripts/int-tel-num/intlTelInput.js"></script>
+
+<script>
+    $("#phone").intlTelInput({
+        defaultCountry: "auto",
+        geoIpLookup: function(callback) {
+            $.get('http://ipinfo.io', function() {}, "jsonp").always(function(resp) {
+                var countryCode = (resp && resp.country) ? resp.country : "";
+                callback(countryCode);
+            });
+        },
+        utilsScript: "public/javascripts/int-tel-num/utils.js" // just for formatting/placeholders etc
+    });
+
+</script>
