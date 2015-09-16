@@ -17,6 +17,12 @@ margin-left: 20px;
 }.flaticon-checked21:before {
 	content: "\e000";
 }
-.flaticon-new100:before {
+.flaticon-exclamationmark:before {
 	content: "\e001";
+}
+.flaticon-fastforward4:before {
+	content: "\e002";
+}
+.flaticon-new100:before {
+	content: "\e003";
 }

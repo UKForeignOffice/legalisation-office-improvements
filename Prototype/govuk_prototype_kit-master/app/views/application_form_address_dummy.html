@@ -15,17 +15,17 @@ Address Details
     <form id="address_form">
         <div class="form-group">
             <label class="form-label" for="first-name">First name</label>
-            <input class="form-control" id="first-name" type="text">
+            <input class="form-control" id="first-name" type="text" value="Informed">
         </div>
 
         <div class="form-group">
             <label class="form-label" for="last-name">Last name</label>
-            <input class="form-control" id="last-name" type="text">
+            <input class="form-control" id="last-name" type="text" value="Solutions">
         </div>
 
         <div class="form-group">
             <label class="form-label" for="postcode">Postcode</label>
-            <input class="form-control-1-8 postcode" id="postcode" type="text">
+            <input class="form-control-1-8 postcode" id="postcode" type="text" value="WA14 4PA">
         </div>
 
         <div class="form-group">
@@ -46,24 +46,24 @@ Address Details
             </select>
          </div>
 
-        <div class="form-group js-hidden" id="address-details-group">
+        <div class="form-group" id="address-details-group">
             <label class="form-label">Street</label>
-            <p><input class="form-control" type="text" id="address1"></p>
-            <p><input class="form-control" type="text"></p>
+            <p><input class="form-control" type="text" id="address1" value="The Old Bank"></p>
+            <p><input class="form-control" type="text" value="Old Market Place"></p>
             <p><input class="form-control" type="text"></p>
 
             <div class="form-group">
                 <label class="form-label">Town</label>
-                <input class="form-control" type="text" id="town">
+                <input class="form-control" type="text" id="town" value="Altrincham">
             </div>
             <div class="form-group">
                 <label class="form-label">County (optional)</label>
-                <input class="form-control" type="text" id="county">
+                <input class="form-control" type="text" id="county" value="Cheshire">
             </div>
 
             <div class="form-group">
                 <label class="form-label">Country</label>
-                <select class="form-select country" type="tel" id="country"></select>
+                <select class="form-select country" type="text" id="country"></select>
             </div>
         </div>
 
@@ -76,8 +76,8 @@ Address Details
         <form>
             <fieldset class="inline">
                 <div class="form-group form-group-compound">
-                    <label class="block-label"  for="radio-indent-1">
-                        <input id="radio-indent-1" type="radio" name="radio-indent-group" value="Business">
+                    <label class="block-label selected"  for="radio-indent-1">
+                        <input id="radio-indent-1" type="radio" name="radio-indent-group" value="Business" checked>
                         Same as above
                     </label>
                     <label class="block-label" data-target="different-address-section" for="radio-indent-2">
@@ -90,15 +90,15 @@ Address Details
                 <div class="panel-indent js-hidden" id="different-address-section">
                     <div class="form-group">
                     <label class="form-label" for="alt_first_name">First name</label>
-                    <input class="form-control" id="alt_first_name" type="text">
+                    <input class="form-control" id="alt_first_name" type="text" value="Informed">
                 </div>
                     <div class="form-group">
                         <label class="form-label" for="alt_last_name">Last name</label>
-                        <input class="form-control" id="alt_last_name" type="text">
+                        <input class="form-control" id="alt_last_name" type="text" value="Solutions">
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="alt_postcode">Postcode</label>
-                        <input class="form-control-1-8" id="alt_postcode" type="text">
+                        <input class="form-control-1-8" id="alt_postcode" type="text" value="WA14 4PA">
                     </div>
                     <div class="form-group">
                         <a class="button find-address" id="find-address-alt">Find address</a>
@@ -120,17 +120,17 @@ Address Details
 
                     <div class="form-group js-hidden" id="address-details-group-alt">
                         <label class="form-label">Street</label>
-                        <p><input class="form-control" type="text" id="address1-alt"></p>
-                        <p><input class="form-control" type="text"></p>
+                        <p><input class="form-control" type="text" id="address1-alt" value="The Old Bank"></p>
+                        <p><input class="form-control" type="text" value="Old Market Place"></p>
                         <p><input class="form-control" type="text"></p>
 
                         <div class="form-group">
                             <label class="form-label">Town</label>
-                            <input class="form-control" type="text" id="town-alt">
+                            <input class="form-control" type="text" id="town-alt" value="Altrincham">
                         </div>
                         <div class="form-group">
                             <label class="form-label">County (optional)</label>
-                            <input class="form-control" type="text" id="county-alt">
+                            <input class="form-control" type="text" id="county-alt" value="Cheshire">
                         </div>
 
                         <div class="form-group">
@@ -146,8 +146,8 @@ Address Details
     
 
     <div class="form-group">
-        <a href="application_form_countries" class="button">Next</a>
-        <p><a href="application_form_personal_details" class="link-back">Back</a></p>
+        <a href="application_form_summary" class="button">Save and Return to Summary</a>
+        <p><a href="application_form_summary" class="example-back-link">Cancel</a></p>
     </div>
 
 </main>

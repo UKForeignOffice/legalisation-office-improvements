@@ -1,0 +1,135 @@
+{{<layout}}
+
+{{$pageTitle}}
+Test
+{{/pageTitle}}
+
+{{$content}}
+
+<main id="content" role="main">
+    {{>pagehead}}
+
+    <h1 class="heading-xlarge">Check if documents can be legalised</h1>
+
+    <table class="">
+        <tr class=""><th>Document Name</th><th>Type/Category</th><th>Accept for Legalisation?</th><th>Accept Photocopies?</th><th>Requires Certification?</th></tr>
+        <tr><td>Articles of Association</td>        <td>Business Document</td>                      <td>Yes</td>    <td>Yes</td>    <td>Yes if photocopy, or if original but not signed by official from Companies House</td></tr>
+        <tr><td>Chamber of Commerce Document</td>   <td>Business Document</td>                      <td>Yes</td>    <td>Yes</td>    <td>Yes if photocopy</td></tr>
+        <tr><td>Certificate of Freesale</td>        <td>Business Document AND Legal Document</td>   <td>Yes</td>    <td>Yes</td>    <td>Yes if photocopy, or if original but not signed by official from Companies House</td></tr>
+        <tr><td>Certificate of Incorporation</td>   <td>Business Document AND Legal Document</td>   <td>Yes</td>    <td>Yes</td>    <td>Yes if photocopy, or if original but not signed by official from Companies House</td></tr>
+        <tr><td>Certificate of Memorandum</td>      <td>Business Document AND Legal Document</td>   <td>Yes</td>    <td>Yes</td>    <td>Yes if photocopy, or if original but not signed by official from Companies House</td></tr>
+        <tr><td>Companies House Document</td>       <td>Business Document AND Legal Document</td>   <td>Yes</td>    <td>Yes</td>    <td>Yes if photocopy, or if original but not signed by official from Companies House</td></tr>
+        <tr><td>Department of Business, Innovation and Skills (BIS) Document</td><td> Business Document AND Legal Document </td><td>Yes</td><td>Yes</td><td> Yes if photocopy, or if original but not signed by official from Companies House</td></tr>
+        <tr><td>County Court Document</td>          <td>Court Document</td>                         <td>Yes</td>    <td>Yes</td>    <td>Yes if photocopy </td></tr>
+        <tr><td>Court Document</td>                 <td>Court Document</td>                         <td>Yes</td>    <td>Yes</td>    <td>Original stamp/seal OR signed by court official OR copy must be certified as normal </td></tr>
+        <tr><td>Court of Bankruptcy Document</td>   <td>Court Document</td>                         <td>Yes</td>    <td>Yes</td>    <td>Yes if photocopy </td></tr>
+        <tr><td>Decree Absolute</td>                <td>Court Document</td>                         <td>Yes</td>    <td>Yes</td>    <td>Yes if photocopy </td></tr>
+        <tr><td>Decree Nisi</td>                    <td>Court Document</td>                         <td>Yes</td>    <td>Yes</td>    <td>Yes if photocopy </td></tr>
+        <tr><td>Family Division of the High Court of Justice Document</td><td>Court Document</td>   <td>Yes</td>    <td>Yes</td>    <td>Yes if photocopy </td></tr>
+        <tr><td>Grant of Probate</td>               <td>Court Document</td>                         <td>Yes</td>    <td>Yes</td>    <td>Yes if photocopy </td></tr>
+        <tr><td>High Court of Justice Document</td> <td>Court Document</td>                         <td>Yes</td>    <td>Yes</td>    <td>Yes if photocopy </td></tr>
+        <tr><td>Probate</td>                        <td>Court Document</td>                         <td>Yes</td>    <td>Yes</td>    <td>Yes if photocopy </td></tr>
+        <tr><td>Sheriff Court Document</td>         <td>Court Document</td>                         <td>Yes</td>    <td>Yes</td>    <td> Yes if photocopy </td></tr>
+        <tr><td>Driving Licence</td>                <td> Driving Licence AND Identity Document</td> <td>Yes</td>    <td>Yes</td>    <td>Yes</td></tr>
+        <tr><td>Degree Certificate or Transcript (UK)</td><td>Educational Document</td>             <td>Yes</td>    <td>Yes</td>    <td>Yes</td></tr>
+        <tr><td>Diploma</td>                        <td>Educational Document</td>                   <td>Yes</td>    <td>Yes</td>    <td>Yes</td></tr>
+        <tr><td>Educational Certificate (UK)</td>   <td>Educational Document</td>                   <td>Yes</td>    <td>Yes</td>    <td>Yes</td></tr>
+        <tr><td>School Document</td>                <td>Educational Document</td>                   <td>Yes</td>    <td>Yes</td>    <td>Yes</td></tr>
+        <tr><td>Government Issued Document</td>     <td>Governement Department Document</td>        <td>Yes</td>    <td>Yes</td>    <td>Yes if photocopy </td></tr>
+        <tr><td>HM Revenue and Customs (HMRC) Document</td><td>Governement Department Document</td>        <td>Yes</td>    <td>Yes</td>    <td>Yes if photocopy </td></tr>
+        <tr><td>Home Office Document</td>           <td>Governement Department Document</td>        <td>Yes</td>    <td>Yes</td>    <td>Yes if photocopy </td></tr>
+        <tr><td>Department of Health Document</td>  <td>Government Department Document</td>         <td>Yes</td>    <td>Yes</td>    <td>Yes if photocopy, or if original but not signed by government official </td></tr>
+        <tr><td>Birth Certificate</td>              <td>GRO (General Registry Office)</td>          <td>Yes</td>    <td>No</td>     <td>No</td></tr>
+        <tr><td>Civil Partnership Certificate</td>  <td>GRO (General Registry Office)</td>          <td>Yes</td>    <td>No</td>     <td>No</td></tr>
+        <tr><td>Conversion of Civil Partnership to Marriage Certificate</td><td>GRO (General Registry Office)</td><td>Yes</td><td>No</td><td>No</td></tr>
+        <tr><td>Coroners Report</td>                <td>GRO (General Registry Office)</td>          <td>Yes</td>    <td>No</td>     <td>No</td></tr>
+        <tr><td>Cremation Certificate</td>          <td>GRO (General Registry Office)</td>          <td>Yes</td>    <td>Yes</td>    <td>Yes if photocopy</td></tr>
+        <tr><td>Death Certificate</td>              <td>GRO (General Registry Office)</td>          <td>Yes</td>    <td>No</td>     <td>No</td></tr>
+        <tr><td> Marriage Certificate</td><td> GRO (General Registry Office)Religious Document </td><td>Yes</td>    <td>No</td>     <td>No</td></tr>
+        <tr><td>Certificate of Naturalisation</td>  <td>Identity Document</td>                      <td>Yes</td>    <td>Yes</td>    <td>Yes</td></tr>
+        <tr><td>Certificate of No Impediment</td>   <td>Identity Document</td>                      <td>Yes</td>    <td>No</td>     <td>No</td></tr>
+        <tr><td>Letter of No Trace</td>             <td>Identity Document</td>                      <td>Yes</td>    <td>No</td>     <td>No</td></tr>
+        <tr><td>Affidavit</td>                      <td>Legal Document</td>                         <td>Yes</td>    <td>Yes</td>    <td>Yes</td></tr>
+        <tr><td>Change of Name Deed</td>            <td>Legal Document</td>                         <td>Yes</td>    <td>Yes</td>    <td>Yes</td></tr>
+        <tr><td>Last Will and Testament</td>        <td>Legal Document</td>                         <td>Yes</td>    <td>Yes</td>    <td>Yes</td></tr>
+        <tr><td>Name Change Deed or Document</td>   <td>Legal Document</td>                         <td>Yes</td>    <td>Yes</td>    <td>Yes</td></tr>
+        <tr><td>Power of Attorney</td>              <td>Legal Document</td>                         <td>Yes</td>    <td>Yes</td>    <td>Yes</td></tr>
+        <tr><td>Statutory Declaration</td>          <td>Legal Document</td>                         <td>Yes</td>    <td>Yes</td>    <td>Yes</td></tr>
+        <tr><td>Doctor’s Letter</td>                <td>Medical Document</td>                       <td>Yes</td>    <td>No</td>     <td>Yes Optional</td></tr>
+        <tr><td>Fit Note</td>                       <td>Medical Document</td>                       <td>Yes</td>    <td>No</td>     <td>Yes Optional</td></tr>
+        <tr><td>Medical Report</td>                 <td>Medical Document</td>                       <td>Yes</td>    <td>No</td>     <td>Yes Optional</td></tr>
+        <tr><td>Medical Test Results</td>           <td>Medical Document</td>                       <td>Yes</td>    <td>No</td>     <td>Yes Optional</td></tr>
+        <tr><td>Sick Note</td>                      <td>Medical Document</td>                       <td>Yes</td>    <td>No</td>     <td>Yes Optional </td></tr>
+        <tr><td>Passport</td>                       <td> Passport AND Identity Document </td>       <td>Yes</td>    <td>Yes</td>    <td>Yes</td></tr>
+        <tr><td>Letter of Invitation (to live in UK)</td><td>Personal Document</td>                 <td>Yes</td>    <td>Yes</td>    <td>Yes</td></tr>
+        <tr><td>Letter from an Employer</td><td> Personal Document AND Employment Document </td>    <td>Yes</td>    <td>Yes</td>    <td>Yes</td></tr>
+        <tr><td>Letter of Enrolment</td><td> Personal Document AND Employment Document </td>        <td>Yes</td>    <td>Yes</td>    <td>Yes</td></tr>
+        <tr><td>Reference from an Employer</td><td> Personal Document AND Employment Document </td> <td>Yes</td>    <td>Yes</td>    <td>Yes</td></tr>
+        <tr><td>Bank Statement</td><td> Personal Document AND Financial Document </td>              <td>Yes</td>    <td>Yes</td>    <td>Yes</td></tr>
+        <tr><td>Utility Bill</td><td> Personal Document AND Financial Document </td>                <td>Yes</td>    <td>Yes</td>    <td>Yes</td></tr>
+        <tr><td>Pet Export Document from the Department of Environment, Food and Rural Affairs (DEFRA)</td><td>Pet Export</td><td>Yes</td><td>No</td><td>No</td></tr>
+        <tr><td>ACRO Police Certificate</td>    <td>Police Document</td>                            <td>Yes</td>    <td>No</td>     <td>Yes if there is no signature from police authority </td></tr>
+        <tr><td>Criminal Records Bureau (CRB) Document</td><td>Police Document</td>                 <td>Yes</td>    <td>No</td>     <td>Yes if there is no signature from police authority </td></tr>
+        <tr><td>Criminal Records Check</td>         <td>Police Document</td>                        <td>Yes</td>    <td>No</td>     <td>Yes if there is no signature from police authority </td></tr>
+        <tr><td>Disclosure Scotland Document</td>   <td>Police Document</td>                        <td>Yes</td>    <td>No</td>     <td>Yes if there is no signature from police authority </td></tr>
+        <tr><td>Fingerprints Document</td>          <td>Police Document</td>                        <td>Yes</td>    <td>No</td>     <td>Yes if issued by a private organisation </td></tr>
+        <tr><td>Police Disclosure Document</td>     <td>Police Document</td>                        <td>Yes</td>    <td>No</td>     <td>Yes if there is no signature from police authority </td></tr>
+        <tr><td>Baptism Certificate</td>            <td>Religious Document</td>                     <td>Yes</td>    <td>Yes</td>    <td>Yes</td></tr>
+        <tr><td>Religious Document</td>             <td>Religious Document</td>                     <td>Yes</td>    <td>Yes</td>    <td>Yes</td></tr>
+        <tr><td>Translation of a document</td>                    <td>Translation</td>                            <td>Yes</td>    <td>Yes</td>    <td>Yes</td></tr>
+        <tr><td>Export Certificate</td>             <td>&nbsp;</td>                                 <td>&nbsp;</td> <td>&nbsp;</td> <td></td></tr>
+</table>
+
+    <div class="form-group">
+        <h2 class="heading-large" id="certifying-documents">Certifying documents</h2>
+
+        <p>If you provide a certified document, it must be certified in the UK by a solicitor or ‘notary public’.</p>
+
+        <p>When the solicitor or notary public signs the document, they must:</p>
+
+        <ul style="list-style-type: circle; list-style-image: url(https://assets.digital.cabinet-office.gov.uk/static/bullet-disc-5px-004b50c23e288accb7f1811a46968402.gif);margin-left: 14px">
+            <li>note the type of certification they have done (eg the document is a true copy of the original)</li>
+            <li>use their personal signature, not a company signature</li>
+            <li>include the date of certification</li>
+            <li>include their company address</li>
+        </ul>
+
+        <p>If they add a notarial certificate, it must be attached to the document. The certificate must also  contain a specific reference to the document they have certified.</p>
+
+        <p>If a notary public from England, Wales or Northern Ireland signs a document for legalisation, they must also stamp or emboss the document with their notarial seal.</p>
+
+        <p>You can find:</p>
+
+        <ul style="list-style-type: circle; list-style-image: url(https://assets.digital.cabinet-office.gov.uk/static/bullet-disc-5px-004b50c23e288accb7f1811a46968402.gif);margin-left: 14px;">
+            <li>
+                <p><a rel="external" href="http://www.lawsociety.org.uk/home.law">solicitors in England and Wales</a></p>
+            </li>
+            <li>
+                <p><a rel="external" href="http://www.facultyoffice.org.uk/notary/find-a-notary/">notaries public in England and Wales</a></p>
+            </li>
+            <li>
+                <p><a rel="external" href="http://www.lawscot.org.uk/">solicitors and notaries public in Scotland</a></p>
+            </li>
+            <li>
+                <p><a rel="external" href="http://www.lawsoc-ni.org/">solicitors and notaries public in Northern Ireland</a></p>
+            </li>
+        </ul>
+    </div>
+
+    </div>
+
+    <div class="form-group">
+        <a  href="application_form_personal_details" class="big button">Continue</a>
+        <p><a href="application_form_type" class="link-back">Back</a></p>
+    </div>
+
+
+
+
+
+
+</main>
+
+{{/content}}
+
+{{/layout}}

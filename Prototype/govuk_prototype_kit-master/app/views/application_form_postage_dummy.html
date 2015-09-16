@@ -1,0 +1,73 @@
+{{<layout}}
+
+{{$pageTitle}}
+Return Delivery
+{{/pageTitle}}
+
+{{$content}}
+
+<main id="content" role="main">
+    {{>pagehead}}
+
+    <h1 class="heading-xlarge">Postage</h1>
+    <p class="text">
+        Please select a delivery method for the return of your legalised documents
+    </p>
+
+    <br/>
+
+    <form class="form-group">
+
+        <label class="block-label" for="radio-4">
+            <input id="radio-4" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
+            Pre-paid stamped, addressed, A4-sized envelope - Free
+        </label>
+        <label class="block-label" for="radio-1">
+            <input id="radio-1" type="radio" name="radio-group" value="RoyalMail">
+            Standard Royal Mail (including British Forces Post Office) - £5.50
+        </label>
+        <label class="block-label selected" for="radio-2">
+            <input id="radio-2" type="radio" name="radio-group" value="Isle of Man or the Channel Islands" checked>
+            European Courier - £14.50
+        </label>
+        <label class="block-label" for="radio-3">
+            <input id="radio-3" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
+            International Courier - £25.00
+        </label>
+
+    </form>
+
+    <details>
+        <summary><span class="summary">I don't know if my country is classed as being in Europe</span></summary>
+        <div class="panel-indent">
+            <p>The following countries are classed as International rather than Europe:</p>
+            <ul>
+                <li>Albania</li>
+                <li>Armenia</li>
+                <li>Azerbaijan</li>
+                <li>Belarus</li>
+                <li>Bosnia and Herzegovina</li>
+                <li>Georgia</li>
+                <li>Liechtenstein</li>
+                <li>Kazakhstan</li>
+                <li>Macedonia</li>
+                <li>Moldova</li>
+                <li>Montenegro</li>
+                <li>Russia</li>
+                <li>Serbia</li>
+                <li>Turkey</li>
+                <li>Ukraine</li>
+            </ul>
+        </div>
+    </details>
+
+    <div class="form-group">
+        <a href="application_form_summary" class="button">Save and Return to Summary</a>
+        <p><a href="application_form_summary" class="example-back-link">Cancel</a></p>
+    </div>
+
+</main>
+
+{{/content}}
+
+{{/layout}}

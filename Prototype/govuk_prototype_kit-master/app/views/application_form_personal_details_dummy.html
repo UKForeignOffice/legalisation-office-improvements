@@ -1,4 +1,3 @@
-
 {{<layout}}
 
 {{$pageTitle}}
@@ -9,42 +8,43 @@ Personal Details
 
 <main id="content" role="main">
     {{>pagehead}}
+
     <h1 class="heading-xlarge">Your personal details</h1>
 
     <div class="form-group">
         <label for="first-name" class="form-label-bold">First name</label>
         <span class="form-hint">First name of the person completing this application</span>
-        <input class="form-control" id="first-name" type="text">
+        <input class="form-control" id="first-name" type="text" value="John">
     </div>
 
     <div class="form-group">
         <label for="last-name"  class="form-label-bold">Last name</label>
         <span class="form-hint">Last name of the person completing this application</span>
-        <input class="form-control" id="last-name" type="text">
+        <input class="form-control" id="last-name" type="text" value="Smith">
     </div>
 
-    <div class="form-group intl-tel-input">
+    <div class="form-group">
         <label for="phone" class="form-label-bold">Telephone number</label>
         <span class="form-hint">Can be landline or mobile. Find your international code from the selector</span>
-        <input type="tel" id="phone" class="form-control" autocomplete="off"  style="width: 100%">
-
+        <input type="tel" id="phone" class="form-control" autocomplete="off"   style="width: 100%" value="03700 002244">
+        <!--<span id="valid-msg" class="hide">✓ Valid</span>-->
+        <!--<span id="error-msg" class="hide">Invalid number</span>-->
     </div>
     <div class="form-group">
         <label for="email" class="form-label-bold">Email address</label>
         <span class="form-hint">We will send confirmation of your application here</span>
-        <input class="form-control" id="email" name="email" type="text">
+        <input class="form-control" id="email" name="email" type="text" value="email@legalisation.gov.uk">
         <div id="email_hint" style="display: none;"></div>
     </div>
     <div class="form-group" id="confirm_email_div">
         <label for="email-confirm" class="form-label-bold">Confirm email address</label>
         <div class="error_message" id="email_confirm_hint" style="display: none;"></div>
-        <input class="form-control" id="email-confirm" type="text">
+        <input class="form-control" id="email-confirm" type="text" value="email@legalisation.gov.uk	">
     </div>
 
     <div class="form-group">
-        <a href="application_form_address" class="button">Next</a>
-        <p><a href="application_eligibility_skip" class="link-back">Back</a></p>
-
+        <a href="application_form_summary" class="button">Save and Return to Summary</a>
+        <p><a href="application_form_summary" class="example-back-link">Cancel</a></p>
     </div>
 
 </main>

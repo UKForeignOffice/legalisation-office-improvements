@@ -1,0 +1,88 @@
+{{<layout}}
+
+{{$pageTitle}}
+Application Type
+{{/pageTitle}}
+
+{{$content}}
+
+<main id="content" role="main">
+    {{>pagehead}}
+    <!-- BootStrap- ONLY FOR THIS PAGE-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+    <h1 class="heading-xlarge">Check if your documents can be legalised</h1>
+
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#myDocs">Birth Certificate</a>
+                    <span class="hide eligible_tag" id="eligible_tag1" style="float:right;">Document Eligible</span>
+                </h4>
+            </div>
+            <div id="myDocs" class="panel-collapse">
+                <div class="panel-body" id="myDocuments">
+                    <!-- Birth certificate -->
+                    <h3 class="heading-medium" style="margin-top: 22px;">Birth certificate</h3>
+                    <p>Your birth certificate can be legalised.</p>
+                    <p>We can only accept the following document, please confirm that you will send us:</p>
+
+                    <form class="form-group">
+                        <label class="block-label" for="checkbox-1">
+                            <input id="checkbox-1" onclick="dummyClick1()" type="checkbox" value="1">
+                            The original birth certificate signed by the Registrar OR with the official seal of Registry Office
+                        </label>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#Degree">Degree certificate or Transcript (UK)</a>
+                    <p class="hide eligible_tag" id="eligible_tag2" style="float:right;">Document Eligible</p>
+                </h4>
+            </div>
+            <div id="Degree" class="panel-collapse collapse" aria-expanded="true" style="padding: 15px;">
+                <!-- Degree Certificate -->
+                <h3 class="heading-medium">Degree certificate or Transcript (UK)</h3>
+                <p>Your degree certificate can be legalised if it has been certified.</p>
+                <p>We accept the following documents, please select your preferred option:</p>
+
+                <form>
+                    <fieldset>
+                        <div class="form-group form-group-compound">
+                            <label class="block-label" for="radio-indent-1">
+                                <input id="radio-indent-1" onclick="dummyClick2()" type="radio" name="radio-indent-group" value="Business">
+                                Your original degree certificate or transcript
+                            </label>
+                            <label class="block-label" for="radio-indent-2">
+                                <input id="radio-indent-2" onclick="dummyClick3()" type="radio" name="radio-indent-group" value="Business Premium">
+                                A photocopy of your degree certificate or transcript
+                            </label>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="form-group">
+        <a href="eligibility_is_certified" class="button">Next</a>
+        <p><a href="eligibility_list_checkboxes" class="link-back">Back</a></p>
+    </div>
+
+</main>
+
+{{/content}}
+
+{{/layout}}

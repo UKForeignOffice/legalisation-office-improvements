@@ -1,0 +1,322 @@
+{{<layout}}
+
+{{$pageTitle}}
+Document Check
+{{/pageTitle}}
+
+{{$content}}
+
+<main id="content" role="main">
+    {{>pagehead}}
+
+    <h1 class="heading-xlarge">Check if documents can be legalised</h1>
+
+   <div class="filtering">
+        <div class="filter-form column-third">
+            <p>Filter by category:</p>
+            <div class="inner-block" id="filter-block">
+                <div class="container-head">Categories <a href="javascript:clearSelection()" class="link" style="float: right;font-weight: normal; font-size:16px;">Clear Selection</a></div>
+                <div class="container">
+                    <ul>
+                        <li><label for="birth-checkbox"><input id="birth-checkbox" type="checkbox" value="Birth">Birth, Marriage, Death Documents <span style="float: right;">(10)</span></label></li>
+                        <li><label for="business-checkbox"><input id="business-checkbox" type="checkbox" value="Business">Business Documents <span style="float: right;">(8)</span></label></li>
+                        <li><label for="court-checkbox"><input id="court-checkbox" type="checkbox" value="Court">Court Documents <span style="float: right;">(10)</span></label></li>
+                        <li><label for="education-checkbox"><input id="education-checkbox" type="checkbox" value="Education">Educational Documents <span style="float: right;">(4)</span></label></li>
+                        <li><label for="government-checkbox"><input id="government-checkbox" type="checkbox" value="Government">Government Department Documents <span style="float: right;">(4)</span></label></li>
+                        <li><label for="general-checkbox"><input id="general-checkbox" type="checkbox" value="General">General Registry Office Documents</label></li>
+                        <li><label for="identity-checkbox"><input id="identity-checkbox" type="checkbox" value="Identity">Identity Documents <span style="float: right;">(2)</span></label></li>
+                        <li><label for="legal-checkbox"><input id="legal-checkbox" type="checkbox" value="Legal">Legal Documents <span style="float: right;">(6)</span></label></li>
+                        <li><label for="medical-checkbox"><input id="medical-checkbox" type="checkbox" value="Medical">Medical Documents <span style="float: right;">(5)</span></label></li>
+                        <li><label for="personal-checkbox"><input id="personal-checkbox" type="checkbox" value="Personal">Personal Documents e.g. Financial or Employment <span style="float: right;">(6)</span></label></li>
+                        <li><label for="pet-checkbox"><input id="pet-checkbox" type="checkbox" value="Pet">Pet Export <span style="float: right;">(1)</span></label></li>
+                        <li><label for="police-checkbox"><input id="police-checkbox" type="checkbox" value="Police">Police Documents <span style="float: right;">(5)</span></label></li>
+                        <li><label for="religious-checkbox"><input id="religious-checkbox" type="checkbox" value="Religious">Religious Document <span style="float: right;">(1)</span></label></li>
+                        <li><label for="translation-checkbox"><input id="translation-checkbox" type="checkbox" value="Translation">Translation <span style="float: right;">(1)</span></label></li>
+                        <li><label for="passport-checkbox"><input id="passport-checkbox" type="checkbox" value="Passport">Passport <span style="float: right;">(1)</span></label></li>
+                        <li><label for="driving-checkbox"><input id="driving-checkbox" type="checkbox" value="Driving">Driving Licence</label></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="filter-results column-two-thirds">
+            <p>You have selected <span id="selected-doc-count1" style="font-weight: bold">0</span> document(s).</p>
+            <label class="block-label" for="checkbox2-55" category="business">
+                <input id="checkbox2-55" type="checkbox" value="1">
+                ACRO Police Certificate
+            </label>
+            <label class="block-label"  for="checkbox2-34" category="legal">
+                <input id="checkbox2-34" type="checkbox" value="0" name="checkbox2-indent-group">
+                Affidavit
+            </label>
+            <label class="block-label"  for="checkbox2-1" category="business">
+                <input id="checkbox2-1" type="checkbox" value="0">
+                Articles of association
+            </label>
+            <label class="block-label" for="checkbox2-52" category="personal">
+                <input id="checkbox2-52" type="checkbox" value="1">
+                Bank Statement
+            </label>
+            <label class="block-label" for="checkbox2-61" category="birth">
+                <input id="checkbox2-61" type="checkbox" value="1">
+                Baptism Certificate
+            </label>
+            <label class="block-label" for="checkbox2-23" category="birth">
+                <input id="checkbox2-23" type="checkbox" value="1">
+                Birth Certificate
+            </label>
+            <label class="block-label"  for="checkbox2-2" category="business">
+                <input id="checkbox2-2" type="checkbox" value="1">
+                Chamber of Commerce
+            </label>
+            <label class="block-label" for="checkbox2-3" category="business">
+                <input id="checkbox2-3" type="checkbox" value="2">
+                Certificate of Incorporation
+            </label>
+            <label class="block-label" for="checkbox2-64" category="business">
+                <input id="checkbox2-64" type="checkbox" value="2">
+                Certificate of Freesale
+            </label>
+            <label class="block-label" for="checkbox2-4" category="business">
+                <input id="checkbox2-4" type="checkbox" value="3">
+                Certificate of Memorandum
+            </label>
+            <label class="block-label" for="checkbox2-29" category="identity">
+                <input id="checkbox2-29" type="checkbox" value="1">
+                Certificate of Naturalisation
+            </label>
+            <label class="block-label" for="checkbox2-30" category="birth">
+                <input id="checkbox2-30" type="checkbox" value="1">
+                Certificate of No Impediment
+            </label>
+            <label class="block-label" for="checkbox2-38" category="legal">
+                <input id="checkbox2-38" type="checkbox" value="4" name="checkbox2-indent-group">
+                Change of Name Deed
+            </label>
+            <label class="block-label" for="checkbox2-24" category="birth">
+                <input id="checkbox2-24" type="checkbox" value="1">
+                Civil Partnership Certificate
+            </label>
+            <label class="block-label" for="checkbox2-5" category="business">
+                <input id="checkbox2-5" type="checkbox" value="4">
+                Companies House Document
+            </label>
+            <label class="block-label" for="checkbox2-25" category="birth">
+                <input id="checkbox2-25" type="checkbox" value="1">
+                Conversion of Civil Partnership to Marriage Certificate
+            </label>
+            <label class="block-label" for="checkbox2-26" category="birth">
+                <input id="checkbox2-26" type="checkbox" value="1">
+                Coroners Report
+            </label>
+            <label class="block-label" for="checkbox2-7" category="court">
+                <input id="checkbox2-7" type="checkbox" value="0">
+                County Court Document
+            </label>
+            <label class="block-label" for="checkbox2-8" category="court">
+                <input id="checkbox2-8" type="checkbox" value="1">
+                Court Document
+            </label>
+            <label class="block-label" for="checkbox2-9" category="court">
+                <input id="checkbox2-9" type="checkbox" value="2">
+                Court of Bankruptcy Document
+            </label>
+            <label class="block-label" for="checkbox2-56" category="police">
+                <input id="checkbox2-56" type="checkbox" value="1">
+                Criminal Records Bureau (CRB) Document
+            </label>
+            <label class="block-label" for="checkbox2-57" category="police">
+                <input id="checkbox2-57" type="checkbox" value="1">
+                Criminal Records Check
+            </label>
+            <label class="block-label" for="checkbox2-28-2" category="birth">
+                <input id="checkbox2-28-2" type="checkbox" value="1">
+                Cremation Certificate
+            </label>
+            <label class="block-label" for="checkbox2-27" category="birth">
+                <input id="checkbox2-27" type="checkbox" value="1">
+                Death Certificate
+            </label>
+            <label class="block-label" for="checkbox2-10" category="court">
+                <input id="checkbox2-10" type="checkbox" value="3">
+                Decree Absolute
+            </label>
+            <label class="block-label" for="checkbox2-11" category="court">
+                <input id="checkbox2-11" type="checkbox" value="4">
+                Decree Nisi
+            </label>
+            <label class="block-label" for="checkbox2-17" category="education">
+                <input id="checkbox2-17" type="checkbox" value="1">
+                Degree Certificate or Transcript (UK)
+            </label>
+            <label class="block-label" for="checkbox2-6" category="business">
+                <input id="checkbox2-6" type="checkbox" value="5">
+                Department of Business, Innovation and Skills (BIS) Document
+            </label>
+            <label class="block-label" for="checkbox2-22" category="government">
+                <input id="checkbox2-22" type="checkbox" value="1">
+                Department of Health Document
+            </label>
+            <label class="block-label" for="checkbox2-18" category="education">
+                <input id="checkbox2-18" type="checkbox" value="1">
+                Diploma
+            </label>
+            <label class="block-label" for="checkbox2-58" category="police">
+                <input id="checkbox2-58" type="checkbox" value="1">
+                Disclosure Scotland Document
+            </label>
+            <label class="block-label"  for="checkbox2-45" category="medical">
+                <input id="checkbox2-45" type="checkbox" value="0" name="checkbox2-indent-group">
+                Doctor’s Letter
+            </label>
+            <label class="block-label" for="checkbox2-31" category="identity">
+                <input id="checkbox2-31" type="checkbox" value="1">
+                Driving Licence (Copy)
+            </label>
+            <label class="block-label" for="checkbox2-19" category="education">
+                <input id="checkbox2-19" type="checkbox" value="1">
+                Educational Certificate (UK)
+            </label>
+            <label class="block-label" for="checkbox2-12" category="court">
+                <input id="checkbox2-12" type="checkbox" value="5">
+                Family Division of the High Court of Justice Document
+            </label>
+            <label class="block-label" for="checkbox2-59" category="police">
+                <input id="checkbox2-59" type="checkbox" value="1">
+                Fingerprints Document
+            </label>
+            <label class="block-label"  for="checkbox2-46" category="medical">
+                <input id="checkbox2-46" type="checkbox" value="1" name="checkbox2-indent-group">
+                Fit Note
+            </label>
+            <label class="block-label" for="checkbox2-21-2" category="government">
+                <input id="checkbox2-21-2" type="checkbox" value="1">
+                Government Issued Document
+            </label>
+            <label class="block-label" for="checkbox2-13" category="court">
+                <input id="checkbox2-13" type="checkbox" value="6">
+                Grant of Probate
+            </label>
+            <label class="block-label" for="checkbox2-14" category="court">
+                <input id="checkbox2-14" type="checkbox" value="8">
+                High Court of Justice Document
+            </label>
+            <label class="block-label" for="checkbox2-22-2" category="government">
+                <input id="checkbox2-22-2" type="checkbox" value="1">
+                HM Revenue and Customs (HMRC) Document
+            </label>
+            <label class="block-label" for="checkbox2-21" category="government">
+                <input id="checkbox2-21" type="checkbox" value="1">
+                Home Office Document
+            </label>
+            <label class="block-label" for="checkbox2-41" category="legal">
+                <input id="checkbox2-41" type="checkbox" value="5" name="checkbox2-indent-group">
+                Last Will and Testament
+            </label>
+            <label class="block-label" for="checkbox2-52-2" category="personal">
+                <input id="checkbox2-52-2" type="checkbox" value="1">
+                Letter from an Employer
+            </label>
+            <label class="block-label" for="checkbox2-50" category="personal">
+                <input id="checkbox2-50" type="checkbox" value="1">
+                Letter of Enrolment
+            </label>
+            <label class="block-label" for="checkbox2-53-2" category="personal">
+                <input id="checkbox2-53-2" type="checkbox" value="1">
+                Letter of Invitation (to live in the UK)
+            </label>
+            <label class="block-label" for="checkbox2-32" category="birth" >
+                <input id="checkbox2-32" type="checkbox" value="1">
+                Letter of No Trace
+            </label>
+            <label class="block-label" for="checkbox2-28" category="birth">
+                <input id="checkbox2-28" type="checkbox" value="1">
+                Marriage Certificate
+            </label>
+            <label class="block-label" for="checkbox2-47" category="medical">
+                <input id="checkbox2-47" type="checkbox" value="2" name="checkbox2-indent-group">
+                Medical Report
+            </label>
+            <label class="block-label" for="checkbox2-48" category="medical">
+                <input id="checkbox2-48" type="checkbox" value="3" name="checkbox2-indent-group">
+                Medical Test Results
+            </label>
+            <label class="block-label" for="checkbox2-42"  category="legal">
+                <input id="checkbox2-42" type="checkbox" value="5" name="checkbox2-indent-group">
+                Name Change Deed or Document
+            </label>
+            <label class="block-label" for="checkbox2-33" category="passport">
+                <input id="checkbox2-33" type="checkbox" value="1">
+                Passport
+            </label>
+            <label class="block-label" for="checkbox2-54"  category="pet">
+                <input id="checkbox2-54" type="checkbox" value="1">
+                Pet Export Document from the Department of Environment, Food and Rural Affairs (DEFRA)
+            </label>
+            <label class="block-label" for="checkbox2-60"  category="police">
+                <input id="checkbox2-60" type="checkbox" value="1">
+                Police Disclosure Document
+            </label>
+            <label class="block-label" for="checkbox2-43" category="legal">
+                <input id="checkbox2-43" type="checkbox" value="5" name="checkbox2-indent-group">
+                Power of Attorney
+            </label>
+            <label class="block-label" for="checkbox2-15" category="court">
+                <input id="checkbox2-15" type="checkbox" value="9">
+                Probate
+            </label>
+            <label class="block-label" for="checkbox2-51" category="personal">
+                <input id="checkbox2-51" type="checkbox" value="1">
+                Reference from an Employer
+            </label>
+            <label class="block-label" for="checkbox2-62" category="religious">
+                <input id="checkbox2-62" type="checkbox" value="1">
+                Religious Document
+            </label>
+            <label class="block-label" for="checkbox2-20" category="education">
+                <input id="checkbox2-20" type="checkbox" value="1">
+                School Document
+            </label>
+            <label class="block-label" for="checkbox2-16" category="court">
+                <input id="checkbox2-16" type="checkbox" value="10">
+                Sheriff Court Document
+            </label>
+            <label class="block-label" for="checkbox2-49" category="medical">
+                <input id="checkbox2-49" type="checkbox" value="4" name="checkbox2-indent-group">
+                Sick Note
+            </label>
+            <label class="block-label" for="checkbox2-44" category="legal">
+                <input id="checkbox2-44" type="checkbox" value="5" name="checkbox2-indent-group">
+                Statutory Declaration
+            </label>
+            <label class="block-label" for="checkbox2-53" category="personal">
+                <input id="checkbox2-53" type="checkbox" value="1">
+                Utility Bill
+            </label>
+            <label class="block-label" for="checkbox2-63" category="translation">
+                <input id="checkbox2-63" type="checkbox" value="1">
+                Translation of a document
+            </label>
+        </div>
+    </div>
+
+    </div>
+        <p style="float: left;clear: both;">
+            You have selected <span id="selected-doc-count2" style="font-weight: bold">0</span> document(s).
+        </p>
+
+        <div class="form-group">
+        <a  href="application_form_personal_details" class="big button">Continue</a>
+        <p><a href="application_form_type" class="link-back">Back</a></p>
+    </div>
+
+
+
+
+
+
+</main>
+
+{{/content}}
+
+{{/layout}}
+<script src="/public/javascripts/jquery-ui.js"></script>

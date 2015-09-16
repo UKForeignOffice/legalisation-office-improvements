@@ -983,6 +983,871 @@ ul, ol {
 .panel-indent .form-group:last-child {
   margin-bottom: 0; }
 
+.alpha-banner {
+  padding: 10px 0 8px 0;
+  border-bottom: 1px solid #bfc1c3; }
+  @media (min-width: 641px) {
+    .alpha-banner {
+      padding-bottom: 10px; } }
+  .alpha-banner p {
+    margin: 0;
+    color: #000;
+    font-family: "nta", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 400;
+    text-transform: none; }
+    @media (max-width: 640px) {
+      .alpha-banner p {
+        font-size: 14px;
+        line-height: 1.1428571429; } }
+  .alpha-banner .phase-tag {
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 8px 0 0;
+    padding: 2px 5px 0;
+    font-family: "nta", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 700;
+    text-transform: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #d53880; }
+    @media (min-width: 641px) {
+      .alpha-banner .phase-tag {
+        vertical-align: baseline; } }
+    @media (max-width: 640px) {
+      .alpha-banner .phase-tag {
+        font-size: 14px;
+        line-height: 1.1428571429; } }
+  .alpha-banner span {
+    vertical-align: top; }
+    @media (min-width: 641px) {
+      .alpha-banner span {
+        vertical-align: baseline; } }
+
+.alpha-tag {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 8px 0 0;
+  padding: 2px 5px 0;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 700;
+  text-transform: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #d53880; }
+  @media (min-width: 641px) {
+    .alpha-tag {
+      vertical-align: baseline; } }
+  @media (max-width: 640px) {
+    .alpha-tag {
+      font-size: 14px;
+      line-height: 1.1428571429; } }
+
+.unbranded {
+  background: #fff; }
+  .unbranded * {
+    font-family: Arial !important; }
+  .unbranded #footer {
+    border: 0;
+    background: #fff; }
+
+fieldset {
+  width: 100%; }
+
+.form-group {
+  float: left;
+  width: 100%;
+  margin-bottom: 15px; }
+  @media (min-width: 641px) {
+    .form-group {
+      margin-bottom: 30px; } }
+
+.form-group-related {
+  margin-bottom: 10px; }
+  @media (min-width: 641px) {
+    .form-group-related {
+      margin-bottom: 20px; } }
+
+.form-group-compound {
+  margin-bottom: 10px; }
+
+.form-title {
+  margin-bottom: 30px; }
+  @media (min-width: 641px) {
+    .form-title {
+      margin-bottom: 45px; } }
+
+.form-label, .form-label-bold {
+  display: block;
+  color: #0b0c0c; }
+
+.form-label {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.3157894737;
+  font-weight: 400;
+  text-transform: none;
+  margin-bottom: 5px; }
+  @media (max-width: 640px) {
+    .form-label {
+      font-size: 16px;
+      line-height: 1.25; } }
+
+.form-label-bold {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 700;
+  text-transform: none;
+  margin-bottom: 0; }
+  @media (max-width: 640px) {
+    .form-label-bold {
+      font-size: 18px;
+      line-height: 1.2; } }
+  .form-label-bold .form-hint {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 19px;
+    line-height: 1.3157894737;
+    font-weight: 400;
+    text-transform: none; }
+    @media (max-width: 640px) {
+      .form-label-bold .form-hint {
+        font-size: 16px;
+        line-height: 1.25; } }
+
+.form-block {
+  float: left;
+  width: 100%; }
+
+.form-hint {
+  display: block;
+  color: #6f777b;
+  margin-bottom: 5px; }
+  @media (min-width: 641px) {
+    .form-hint {
+      margin-top: 8px; } }
+
+.form-control {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.3157894737;
+  font-weight: 400;
+  text-transform: none;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 4px;
+  background-color: #fff;
+  border: 1px solid #bfc1c3;
+  -webkit-appearance: none;
+  border-radius: 0; }
+  @media (max-width: 640px) {
+    .form-control {
+      font-size: 16px;
+      line-height: 1.25; } }
+  @media (min-width: 641px) {
+    .form-control {
+      width: 50%; } }
+
+.form-control-3-4 {
+  width: 100%; }
+  @media (min-width: 641px) {
+    .form-control-3-4 {
+      width: 75%; } }
+
+.form-control-1-2 {
+  width: 100%; }
+  @media (min-width: 641px) {
+    .form-control-1-2 {
+      width: 50%; } }
+
+.form-control-1-4 {
+  width: 25%; }
+
+.form-control-1-8 {
+  width: 12.5%; }
+
+.form-radio {
+  display: block;
+  margin: 10px 0; }
+
+.form-radio input {
+  vertical-align: middle;
+  margin: -4px 5px 0 0; }
+
+.form-checkbox {
+  display: block;
+  margin: 15px 0; }
+
+.form-checkbox input {
+  vertical-align: middle;
+  margin: -2px 5px 0 0; }
+
+.validation-summary {
+  border: 3px solid #b10e1e;
+  padding: 15px 30px;
+  margin-bottom: 30px; }
+
+.validation-summary ul {
+  margin-top: 10px; }
+
+.validation-summary li, .validation-summary p {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none; }
+  @media (max-width: 640px) {
+    .validation-summary li, .validation-summary p {
+      font-size: 14px;
+      line-height: 1.1428571429; } }
+
+.validation-summary p {
+  margin-top: 15px;
+  margin-bottom: 5px; }
+
+.validation-summary a {
+  color: #b10e1e; }
+
+.validation-summary .heading-small {
+  margin-top: 15px; }
+
+.validation-message {
+  display: block;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  color: #b10e1e; }
+  @media (max-width: 640px) {
+    .validation-message {
+      font-size: 14px;
+      line-height: 1.1428571429; } }
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+input[type=number] {
+  -moz-appearance: textfield; }
+
+.form-date .form-group {
+  float: left;
+  width: 50px;
+  margin-right: 20px;
+  margin-bottom: 0;
+  clear: none; }
+  .form-date .form-group label {
+    display: block;
+    margin-bottom: 5px; }
+  .form-date .form-group input {
+    width: 100%; }
+.form-date .form-group-year {
+  width: 70px; }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+.block-label {
+  display: block;
+  float: none;
+  clear: left;
+  position: relative;
+  background: #dee0e2;
+  border: 1px solid #dee0e2;
+  padding: 18px 30px 15px 45px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer; }
+  @media (min-width: 641px) {
+    .block-label {
+      float: left;
+      margin-top: 5px;
+      margin-bottom: 5px; } }
+  .block-label input {
+    position: absolute;
+    top: 18px;
+    left: 15px;
+    cursor: pointer; }
+  .block-label:hover {
+    border-color: #0b0c0c; }
+
+.inline .block-label {
+  clear: none;
+  margin-right: 15px; }
+
+.js-enabled label.selected {
+  background: #fff;
+  border-color: #0b0c0c; }
+
+.js-enabled label.focused {
+  outline: 3px solid #ffbf47; }
+
+.js-enabled .focused input:focus {
+  outline: none; }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+.block-label {
+  display: block;
+  float: none;
+  clear: left;
+  position: relative;
+  background: #dee0e2;
+  border: 1px solid #dee0e2;
+  padding: 18px 30px 15px 45px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer; }
+  @media (min-width: 641px) {
+    .block-label {
+      float: left;
+      margin-top: 5px;
+      margin-bottom: 5px; } }
+  .block-label input {
+    position: absolute;
+    top: 18px;
+    left: 15px;
+    cursor: pointer; }
+  .block-label:hover {
+    border-color: #0b0c0c; }
+
+.inline .block-label {
+  clear: none;
+  margin-right: 15px; }
+
+.js-enabled label.selected {
+  background: #fff;
+  border-color: #0b0c0c; }
+
+.js-enabled label.focused {
+  outline: 3px solid #ffbf47; }
+
+.js-enabled .focused input:focus {
+  outline: none; }
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+input[type=number] {
+  -moz-appearance: textfield; }
+
+.form-date .form-group {
+  float: left;
+  width: 50px;
+  margin-right: 20px;
+  margin-bottom: 0;
+  clear: none; }
+  .form-date .form-group label {
+    display: block;
+    margin-bottom: 5px; }
+  .form-date .form-group input {
+    width: 100%; }
+.form-date .form-group-year {
+  width: 70px; }
+
+.validation-summary {
+  border: 3px solid #b10e1e;
+  padding: 15px 30px;
+  margin-bottom: 30px; }
+
+.validation-summary ul {
+  margin-top: 10px; }
+
+.validation-summary li, .validation-summary p {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none; }
+  @media (max-width: 640px) {
+    .validation-summary li, .validation-summary p {
+      font-size: 14px;
+      line-height: 1.1428571429; } }
+
+.validation-summary p {
+  margin-top: 15px;
+  margin-bottom: 5px; }
+
+.validation-summary a {
+  color: #b10e1e; }
+
+.validation-summary .heading-small {
+  margin-top: 15px; }
+
+.validation-message {
+  display: block;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  color: #b10e1e; }
+  @media (max-width: 640px) {
+    .validation-message {
+      font-size: 14px;
+      line-height: 1.1428571429; } }
+
+#global-breadcrumb ol li {
+  font-family: "nta",Arial,sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  background-image: url(https://assets.digital.cabinet-office.gov.uk/static/separator-cdeb08166e771d0c630c018110044965.png);
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  float: left;
+  list-style: none;
+  margin-left: 0;
+  margin-right: 0.5em;
+  margin-bottom: 0.4em;
+  padding-right: 1em;
+  zoom: 1;
+  display: list-item;
+  text-align: -webkit-match-parent;
+  color: #0b0c0c;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
+
+a:visited {
+  color: #000000; }
+
+#global-breadcrumb ol li:last-child {
+  background-image: none;
+  margin-right: 0; }
+
+#radio-indent-1.selected {
+  background: #fff;
+  border-color: #0b0c0c; }
+
+.swatch-alpha {
+  background-color: #d53880; }
+
+.phase-banner-alpha {
+  padding: 10px 0 8px 0;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #bfc1c3; }
+
+@media (min-width: 641px) {
+  .phase-banner-alpha {
+    padding-bottom: 10px; } }
+
+.phase-banner-alpha p {
+  margin: 0;
+  color: #000;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.1428571429;
+  font-weight: 400;
+  text-transform: none; }
+
+@media (min-width: 641px) {
+  .phase-banner-alpha p {
+    font-size: 16px;
+    line-height: 1.25; } }
+
+.phase-banner-alpha .phase-tag {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 8px 0 0;
+  padding: 2px 5px 0;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.1428571429;
+  font-weight: 700;
+  text-transform: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #d53880; }
+
+@media (min-width: 641px) {
+  .phase-banner-alpha .phase-tag {
+    vertical-align: baseline; } }
+
+@media (min-width: 641px) {
+  .phase-banner-alpha .phase-tag {
+    font-size: 16px;
+    line-height: 1.25; } }
+
+.phase-banner-alpha span {
+  vertical-align: top; }
+
+@media (min-width: 641px) {
+  .phase-banner-alpha span {
+    vertical-align: baseline; } }
+
+.intro ul {
+  font-family: "nta",Arial,sans-serif;
+  font-size: 19px;
+  line-height: 1.3;
+  font-weight: 400;
+  text-transform: none;
+  margin: 1em 0.4em !important;
+  padding-left: 0.3em;
+  text-align: -webkit-match-parent;
+  list-style-type: circle;
+  list-style-image: url(https://assets.digital.cabinet-office.gov.uk/static/bullet-disc-5px-004b50c23e288accb7f1811a46968402.gif); }
+
+.button-get-started {
+  background-image: url(https://assets.digital.cabinet-office.gov.uk/static/icon-pointer-d08eb64ed45dc2c67426f62694b5e84b.png);
+  background-position: 100% 50%;
+  background-repeat: no-repeat; }
+
+.col1, .col2 {
+  display: block;
+  float: left;
+  margin-right: 20px; }
+
+#remove-control {
+  overflow: hidden;
+  width: auto;
+  padding-top: 36px;
+  margin-bottom: 30px; }
+
+#otherCountries, #search-main {
+  text-transform: none !important;
+  border: 1px solid #bbb !important;
+  margin: 0 !important;
+  padding: 0.5em !important;
+  clear: both !important;
+  display: block !important;
+  font-family: "nta", Arial, sans-serif !important;
+  font-size: 19px !important; }
+
+#otherCountries {
+  height: 47px !important; }
+
+input.number, #solicitor-name {
+  text-transform: none;
+  border: 1px solid #bbb;
+  margin: 0 0 1em;
+  padding: 0.5em;
+  width: 100px;
+  clear: both;
+  display: block; }
+
+#solicitor-name {
+  width: 440px; }
+
+#addScnt {
+  display: block;
+  float: left;
+  clear: both; }
+
+.typeahead-list {
+  font-family: "nta", Arial, sans-serif !important;
+  font-size: 19px !important; }
+
+.warning {
+  background: url("https://assets.registertovote.service.gov.uk/assets/images/icon-important.png") no-repeat scroll 0 0.5em;
+  padding-left: 3em; }
+
+.warning p {
+  font-weight: 600; }
+
+.change {
+  color: #0b0c0c;
+  position: relative;
+  float: right;
+  margin-top: 0;
+  display: inline-block;
+  padding: 0.35em 0.5em 0.15em 0.5em;
+  border: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+  box-shadow: 0 2.5px 0 #b5babe;
+  font-size: 0.9em;
+  line-height: 1.25;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  overflow: hidden;
+  top: 0;
+  right: 0; }
+
+a.change {
+  color: #0b0c0c !important; }
+
+.summary_heading {
+  width: inherit;
+  max-width: 30em;
+  margin-bottom: 20px;
+  padding-top: 20px; }
+
+.summary_block {
+  max-width: 30em;
+  border-top: 1px solid #dee0e2;
+  padding: 1em 0.5em 0em 0em; }
+
+.summary_group {
+  width: 45%;
+  padding-left: 20px;
+  display: inline-block;
+  vertical-align: text-top; }
+
+.change, .change:hover, .change:focus, .change:visited {
+  color: #0b0c0c;
+  background: #d0d3d6; }
+
+.summary_block h3 {
+  width: 33%;
+  display: inline-block;
+  vertical-align: top; }
+
+.container-confirmed {
+  color: white;
+  background-color: #28a197;
+  padding: 0px 0px;
+  text-align: center;
+  vertical-align: middle;
+  float: left;
+  width: 100%; }
+
+.container-warning {
+  text-align: center;
+  background-color: #ffbf47;
+  color: #333333;
+  padding-top: 40px;
+  padding-bottom: 40px; }
+
+i.flaticon-checked21 {
+  padding-right: 22px;
+  color: white;
+  font-weight: bold; }
+
+i.flaticon-exclamationmark:before {
+  font-size: 35px; }
+
+i.flaticon-fastforward4 {
+  float: right; }
+
+li.active i.flaticon-fastforward4 {
+  color: white; }
+
+i {
+  padding-right: 15px; }
+
+.reference {
+  margin-top: 15px !important; }
+
+.error_div {
+  border-left: 5px solid #b10e1e;
+  padding-left: 15px; }
+
+.error_message {
+  color: #b10e1e;
+  font-weight: bold; }
+
+/* JQuery Tabs */
+#tabs {
+  font-family: "nta", Arial, sans-serif !important;
+  font-weight: normal !important;
+  border: none !important;
+  margin-bottom: 25px; }
+
+.ui-widget-header {
+  border: 0px !important;
+  background: none !important; }
+
+.ui-widget-content {
+  font-size: 18px !important; }
+
+.ui-tabs .ui-tabs-panel {
+  border: none !important;
+  border-top: solid 1px #bfc1c3 !important; }
+
+ul.ui-tabs-nav {
+  margin-bottom: 0px !important; }
+
+.ui-tabs .ui-tabs-nav li {
+  display: block;
+  float: none;
+  position: relative;
+  background: #dee0e2;
+  border: none;
+  padding: 18px 30px 15px 45px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #2e8aca !important;
+  top: 1px !important; }
+
+.ui-tabs .ui-tabs-nav li a:focus {
+  background: none; }
+
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
+  font-weight: normal !important; }
+
+.ui-state-active {
+  background-color: #fff !important;
+  border-color: #bfc1c3 !important;
+  font-weight: normal !important; }
+
+.ui-state-default a {
+  color: #2e8aca !important;
+  font-weight: normal !important;
+  text-decoration: underline !important;
+  background-color: #fff;
+  border: solid 1px #bfc1c3;
+  position: relative;
+  z-index: 5; }
+
+.ui-state-active a {
+  border-bottom: solid 1px #fff;
+  color: #0b0c0c !important;
+  text-decoration: none !important; }
+
+.ui-tabs .ui-tabs-nav li a:hover {
+  background-color: #bfc1c3;
+  text-decoration: underline;
+  color: #2e8aca !important; }
+
+.ui-tabs-panel a:link {
+  color: #005ea5 !important; }
+
+.application-notice.info-notice {
+  border-left: 10px solid #bfc1c3 !important;
+  margin-bottom: 1em !important;
+  padding-left: 20px; }
+
+.application-notice.info-notice p {
+  padding: 20px; }
+
+.el_option {
+  width: 100%;
+  height: 35px;
+  font-size: 17px;
+  text-align: left;
+  margin-bottom: 2px; }
+
+.categoryButtons {
+  display: block;
+  background: #dee0e2;
+  border: 1px solid #dee0e2;
+  margin-bottom: 5px;
+  cursor: pointer;
+  height: 45px;
+  width: 430px;
+  text-align: left;
+  font-size: 17px; }
+
+.documentButtons {
+  display: block;
+  background: #dee0e2;
+  border: 1px solid #dee0e2;
+  margin-bottom: 5px;
+  cursor: pointer;
+  height: 45px;
+  width: 430px;
+  text-align: left;
+  font-size: 17px; }
+
+.hide {
+  display: none; }
+
+.bulletPoints {
+  list-style-type: circle;
+  list-style-image: url(https://assets.digital.cabinet-office.gov.uk/static/bullet-disc-5px-004b50c23e288accb7f1811a46968402.gif);
+  margin-left: 14px; }
+
+.print {
+  background-image: url('../images/printer.png');
+  background-size: 21px 20px;
+  padding-left: 27px;
+  background-repeat: no-repeat; }
+
+.find-address, .address-manual {
+  float: left; }
+
+.address-manual {
+  margin-top: 7px; }
+
+ul {
+  list-style-type: disc;
+  padding-left: 40px;
+  padding-bottom: 20px; }
+
+table.summary-table {
+  width: 70%; }
+
+td.summary-table-cell-label {
+  width: 33%;
+  vertical-align: top;
+  border-top: 1px solid #bfc1c3; }
+
+td.summary-table-cell-content {
+  width: 33%;
+  vertical-align: top;
+  border-top: 1px solid #bfc1c3;
+  padding-left: 3em; }
+
+td.summary-table-cell-link {
+  width: 33%;
+  vertical-align: top;
+  border-top: 1px solid #bfc1c3;
+  text-align: right;
+  padding-right: 0em; }
+
+/** Search **/
+#search-form input.submit {
+  width: 47px;
+  height: 47px;
+  border-width: 0 0 0 1px;
+  border-left-color: #222;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  overflow: hidden;
+  text-indent: -5000px;
+  cursor: pointer;
+  color: #fff;
+  background: #0b0c0c url(https://assets.digital.cabinet-office.gov.uk/frontend/homepage/search-button-085aa82ff641b5cfb3eb090c888459f96be271efe9c1d98a73c8a181202d9063.png) no-repeat 5px 50%; }
+
+#search-form {
+  margin-bottom: 30px; }
+
+#search-main {
+  float: left; }
+
+.myDocuments {
+  color: #333;
+  background-color: #f5f5f5;
+  border-color: #ddd;
+  margin-bottom: 10px; }
+
+.eligible_tag {
+  color: #008000; }
+
+.certify_tag {
+  color: #ff0000; }
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
+  border-radius: 0;
+  background-color: #005ea5 !important; }
+
 /**
  * Variables declared here can be overridden by consuming applications, with
  * the help of the `!default` flag.
@@ -1903,723 +2768,40 @@ ul, ol {
 .iti-flag {
   background-image: url("/public/images/flags.png"); }
 
-.alpha-banner {
-  padding: 10px 0 8px 0;
-  border-bottom: 1px solid #bfc1c3; }
-  @media (min-width: 641px) {
-    .alpha-banner {
-      padding-bottom: 10px; } }
-  .alpha-banner p {
-    margin: 0;
-    color: #000;
-    font-family: "nta", Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.25;
-    font-weight: 400;
-    text-transform: none; }
-    @media (max-width: 640px) {
-      .alpha-banner p {
-        font-size: 14px;
-        line-height: 1.1428571429; } }
-  .alpha-banner .phase-tag {
-    display: -moz-inline-stack;
-    display: inline-block;
-    vertical-align: top;
-    margin: 0 8px 0 0;
-    padding: 2px 5px 0;
-    font-family: "nta", Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.25;
-    font-weight: 700;
-    text-transform: none;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-decoration: none;
-    color: #fff;
-    background-color: #d53880; }
-    @media (min-width: 641px) {
-      .alpha-banner .phase-tag {
-        vertical-align: baseline; } }
-    @media (max-width: 640px) {
-      .alpha-banner .phase-tag {
-        font-size: 14px;
-        line-height: 1.1428571429; } }
-  .alpha-banner span {
-    vertical-align: top; }
-    @media (min-width: 641px) {
-      .alpha-banner span {
-        vertical-align: baseline; } }
-
-.alpha-tag {
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: top;
-  margin: 0 8px 0 0;
-  padding: 2px 5px 0;
-  font-family: "nta", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.25;
-  font-weight: 700;
-  text-transform: none;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-decoration: none;
-  color: #fff;
-  background-color: #d53880; }
-  @media (min-width: 641px) {
-    .alpha-tag {
-      vertical-align: baseline; } }
-  @media (max-width: 640px) {
-    .alpha-tag {
-      font-size: 14px;
-      line-height: 1.1428571429; } }
-
-.unbranded {
-  background: #fff; }
-  .unbranded * {
-    font-family: Arial !important; }
-  .unbranded #footer {
-    border: 0;
-    background: #fff; }
-
-fieldset {
-  width: 100%; }
-
-.form-group {
+.service-type ul {
+  list-style-type: none;
+  padding-left: 0;
   float: left;
-  width: 100%;
-  margin-bottom: 15px; }
-  @media (min-width: 641px) {
-    .form-group {
-      margin-bottom: 30px; } }
-
-.form-group-related {
-  margin-bottom: 10px; }
-  @media (min-width: 641px) {
-    .form-group-related {
-      margin-bottom: 20px; } }
-
-.form-group-compound {
-  margin-bottom: 10px; }
-
-.form-title {
-  margin-bottom: 30px; }
-  @media (min-width: 641px) {
-    .form-title {
-      margin-bottom: 45px; } }
-
-.form-label, .form-label-bold {
-  display: block;
-  color: #0b0c0c; }
-
-.form-label {
-  font-family: "nta", Arial, sans-serif;
-  font-size: 19px;
-  line-height: 1.3157894737;
-  font-weight: 400;
-  text-transform: none;
-  margin-bottom: 5px; }
-  @media (max-width: 640px) {
-    .form-label {
-      font-size: 16px;
-      line-height: 1.25; } }
-
-.form-label-bold {
-  font-family: "nta", Arial, sans-serif;
-  font-size: 24px;
-  line-height: 1.25;
-  font-weight: 700;
-  text-transform: none;
-  margin-bottom: 0; }
-  @media (max-width: 640px) {
-    .form-label-bold {
-      font-size: 18px;
-      line-height: 1.2; } }
-  .form-label-bold .form-hint {
-    font-family: "nta", Arial, sans-serif;
-    font-size: 19px;
-    line-height: 1.3157894737;
-    font-weight: 400;
-    text-transform: none; }
-    @media (max-width: 640px) {
-      .form-label-bold .form-hint {
-        font-size: 16px;
-        line-height: 1.25; } }
-
-.form-block {
-  float: left;
-  width: 100%; }
-
-.form-hint {
-  display: block;
-  color: #6f777b;
-  margin-bottom: 5px; }
-  @media (min-width: 641px) {
-    .form-hint {
-      margin-top: 8px; } }
-
-.form-control {
-  font-family: "nta", Arial, sans-serif;
-  font-size: 19px;
-  line-height: 1.3157894737;
-  font-weight: 400;
-  text-transform: none;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 4px;
-  background-color: #fff;
-  border: 1px solid #bfc1c3;
-  -webkit-appearance: none;
-  border-radius: 0; }
-  @media (max-width: 640px) {
-    .form-control {
-      font-size: 16px;
-      line-height: 1.25; } }
-  @media (min-width: 641px) {
-    .form-control {
-      width: 50%; } }
-
-.form-control-3-4 {
-  width: 100%; }
-  @media (min-width: 641px) {
-    .form-control-3-4 {
-      width: 75%; } }
-
-.form-control-1-2 {
-  width: 100%; }
-  @media (min-width: 641px) {
-    .form-control-1-2 {
-      width: 50%; } }
-
-.form-control-1-4 {
-  width: 25%; }
-
-.form-control-1-8 {
-  width: 12.5%; }
-
-.form-radio {
-  display: block;
-  margin: 10px 0; }
-
-.form-radio input {
-  vertical-align: middle;
-  margin: -4px 5px 0 0; }
-
-.form-checkbox {
-  display: block;
-  margin: 15px 0; }
-
-.form-checkbox input {
-  vertical-align: middle;
-  margin: -2px 5px 0 0; }
-
-.validation-summary {
-  border: 3px solid #b10e1e;
-  padding: 15px 30px;
-  margin-bottom: 30px; }
-
-.validation-summary ul {
-  margin-top: 10px; }
-
-.validation-summary li, .validation-summary p {
-  font-family: "nta", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.25;
-  font-weight: 400;
-  text-transform: none; }
-  @media (max-width: 640px) {
-    .validation-summary li, .validation-summary p {
-      font-size: 14px;
-      line-height: 1.1428571429; } }
-
-.validation-summary p {
-  margin-top: 15px;
-  margin-bottom: 5px; }
-
-.validation-summary a {
-  color: #b10e1e; }
-
-.validation-summary .heading-small {
   margin-top: 15px; }
 
-.validation-message {
-  display: block;
-  font-family: "nta", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.25;
-  font-weight: 400;
-  text-transform: none;
-  color: #b10e1e; }
-  @media (max-width: 640px) {
-    .validation-message {
-      font-size: 14px;
-      line-height: 1.1428571429; } }
+.no-margin:before {
+  margin-left: 0 !important;
+  color: #008000; }
 
-input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0; }
+/** Filter options **/
+.filter-form {
+  padding-left: 0;
+  margin-bottom: 20px; }
 
-input[type=number] {
-  -moz-appearance: textfield; }
+#filter-block {
+  background-color: #dee0e2;
+  padding: 5px; }
 
-.form-date .form-group {
-  float: left;
-  width: 50px;
-  margin-right: 20px;
-  margin-bottom: 0;
-  clear: none; }
-  .form-date .form-group label {
-    display: block;
-    margin-bottom: 5px; }
-  .form-date .form-group input {
-    width: 100%; }
-.form-date .form-group-year {
-  width: 70px; }
-
-@-ms-viewport {
-  width: device-width; }
-
-@-o-viewport {
-  width: device-width; }
-
-.block-label {
-  display: block;
-  float: none;
-  clear: left;
-  position: relative;
-  background: #dee0e2;
-  border: 1px solid #dee0e2;
-  padding: 18px 30px 15px 45px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  cursor: pointer; }
-  @media (min-width: 641px) {
-    .block-label {
-      float: left;
-      margin-top: 5px;
-      margin-bottom: 5px; } }
-  .block-label input {
-    position: absolute;
-    top: 18px;
-    left: 15px;
-    cursor: pointer; }
-  .block-label:hover {
-    border-color: #0b0c0c; }
-
-.inline .block-label {
-  clear: none;
-  margin-right: 15px; }
-
-.js-enabled label.selected {
-  background: #fff;
-  border-color: #0b0c0c; }
-
-.js-enabled label.focused {
-  outline: 3px solid #ffbf47; }
-
-.js-enabled .focused input:focus {
-  outline: none; }
-
-@-ms-viewport {
-  width: device-width; }
-
-@-o-viewport {
-  width: device-width; }
-
-.block-label {
-  display: block;
-  float: none;
-  clear: left;
-  position: relative;
-  background: #dee0e2;
-  border: 1px solid #dee0e2;
-  padding: 18px 30px 15px 45px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  cursor: pointer; }
-  @media (min-width: 641px) {
-    .block-label {
-      float: left;
-      margin-top: 5px;
-      margin-bottom: 5px; } }
-  .block-label input {
-    position: absolute;
-    top: 18px;
-    left: 15px;
-    cursor: pointer; }
-  .block-label:hover {
-    border-color: #0b0c0c; }
-
-.inline .block-label {
-  clear: none;
-  margin-right: 15px; }
-
-.js-enabled label.selected {
-  background: #fff;
-  border-color: #0b0c0c; }
-
-.js-enabled label.focused {
-  outline: 3px solid #ffbf47; }
-
-.js-enabled .focused input:focus {
-  outline: none; }
-
-input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0; }
-
-input[type=number] {
-  -moz-appearance: textfield; }
-
-.form-date .form-group {
-  float: left;
-  width: 50px;
-  margin-right: 20px;
-  margin-bottom: 0;
-  clear: none; }
-  .form-date .form-group label {
-    display: block;
-    margin-bottom: 5px; }
-  .form-date .form-group input {
-    width: 100%; }
-.form-date .form-group-year {
-  width: 70px; }
-
-.validation-summary {
-  border: 3px solid #b10e1e;
-  padding: 15px 30px;
-  margin-bottom: 30px; }
-
-.validation-summary ul {
-  margin-top: 10px; }
-
-.validation-summary li, .validation-summary p {
-  font-family: "nta", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.25;
-  font-weight: 400;
-  text-transform: none; }
-  @media (max-width: 640px) {
-    .validation-summary li, .validation-summary p {
-      font-size: 14px;
-      line-height: 1.1428571429; } }
-
-.validation-summary p {
-  margin-top: 15px;
-  margin-bottom: 5px; }
-
-.validation-summary a {
-  color: #b10e1e; }
-
-.validation-summary .heading-small {
-  margin-top: 15px; }
-
-.validation-message {
-  display: block;
-  font-family: "nta", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.25;
-  font-weight: 400;
-  text-transform: none;
-  color: #b10e1e; }
-  @media (max-width: 640px) {
-    .validation-message {
-      font-size: 14px;
-      line-height: 1.1428571429; } }
-
-#global-breadcrumb ol li {
-  font-family: "nta",Arial,sans-serif;
-  font-size: 16px;
-  line-height: 1.25;
-  font-weight: 400;
-  text-transform: none;
-  background-image: url(https://assets.digital.cabinet-office.gov.uk/static/separator-cdeb08166e771d0c630c018110044965.png);
-  background-position: 100% 50%;
-  background-repeat: no-repeat;
-  float: left;
-  list-style: none;
-  margin-left: 0;
-  margin-right: 0.5em;
-  margin-bottom: 0.4em;
-  padding-right: 1em;
-  zoom: 1;
-  display: list-item;
-  text-align: -webkit-match-parent;
-  color: #0b0c0c;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
-
-a:visited {
-  color: #000000; }
-
-#global-breadcrumb ol li:last-child {
-  background-image: none;
-  margin-right: 0; }
-
-#radio-indent-1.selected {
-  background: #fff;
-  border-color: #0b0c0c; }
-
-.swatch-alpha {
-  background-color: #d53880; }
-
-.phase-banner-alpha {
-  padding: 10px 0 8px 0;
-  padding-bottom: 15px;
-  border-bottom: 1px solid #bfc1c3; }
-
-@media (min-width: 641px) {
-  .phase-banner-alpha {
-    padding-bottom: 10px; } }
-
-.phase-banner-alpha p {
-  margin: 0;
-  color: #000;
-  font-family: "nta", Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.1428571429;
-  font-weight: 400;
-  text-transform: none; }
-
-@media (min-width: 641px) {
-  .phase-banner-alpha p {
-    font-size: 16px;
-    line-height: 1.25; } }
-
-.phase-banner-alpha .phase-tag {
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: top;
-  margin: 0 8px 0 0;
-  padding: 2px 5px 0;
-  font-family: "nta", Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.1428571429;
-  font-weight: 700;
-  text-transform: none;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-decoration: none;
-  color: #fff;
-  background-color: #d53880; }
-
-@media (min-width: 641px) {
-  .phase-banner-alpha .phase-tag {
-    vertical-align: baseline; } }
-
-@media (min-width: 641px) {
-  .phase-banner-alpha .phase-tag {
-    font-size: 16px;
-    line-height: 1.25; } }
-
-.phase-banner-alpha span {
-  vertical-align: top; }
-
-@media (min-width: 641px) {
-  .phase-banner-alpha span {
-    vertical-align: baseline; } }
-
-.intro ul {
-  font-family: "nta",Arial,sans-serif;
-  font-size: 19px;
-  line-height: 1.3;
-  font-weight: 400;
-  text-transform: none;
-  margin: 1em 0.4em !important;
-  padding-left: 0.3em;
-  text-align: -webkit-match-parent;
-  list-style-type: circle;
-  list-style-image: url(https://assets.digital.cabinet-office.gov.uk/static/bullet-disc-5px-004b50c23e288accb7f1811a46968402.gif); }
-
-.button-get-started {
-  background-image: url(https://assets.digital.cabinet-office.gov.uk/static/icon-pointer-d08eb64ed45dc2c67426f62694b5e84b.png);
-  background-position: 100% 50%;
-  background-repeat: no-repeat; }
-
-.col1, .col2 {
-  display: block;
-  float: left;
-  margin-right: 20px; }
-
-#remove-control {
-  overflow: hidden;
-  width: auto;
-  padding-top: 36px;
-  margin-bottom: 30px; }
-
-#otherCountries {
-  text-transform: none !important;
-  border: 1px solid #bbb !important;
-  margin: 0 !important;
-  padding: 0.5em !important;
-  clear: both !important;
-  display: block !important;
-  font-family: "nta", Arial, sans-serif !important;
-  height: 47px !important;
-  font-size: 19px !important; }
-
-input.number, #solicitor-name {
-  text-transform: none;
-  border: 1px solid #bbb;
-  margin: 0 0 1em;
-  padding: 0.5em;
-  width: 100px;
-  clear: both;
-  display: block; }
-
-#solicitor-name {
-  width: 440px; }
-
-#addScnt {
-  display: block;
-  float: left;
-  clear: both; }
-
-.typeahead-list {
-  font-family: "nta", Arial, sans-serif !important;
-  font-size: 19px !important; }
-
-.warning {
-  background: url("https://assets.registertovote.service.gov.uk/assets/images/icon-important.png") no-repeat scroll 0 0.5em;
-  padding-left: 3em; }
-
-.warning p {
-  font-weight: 600; }
-
-.change {
-  color: #0b0c0c;
-  position: relative;
-  float: right;
-  margin-top: 0;
-  display: inline-block;
-  padding: 0.35em 0.5em 0.15em 0.5em;
-  border: none;
-  border-radius: 0;
-  -webkit-appearance: none;
-  box-shadow: 0 2.5px 0 #b5babe;
-  font-size: 0.9em;
-  line-height: 1.25;
-  text-decoration: none;
-  -webkit-font-smoothing: antialiased;
-  cursor: pointer;
-  overflow: hidden;
-  top: 0;
-  right: 0; }
-
-a.change {
-  color: #0b0c0c !important; }
-
-.summary_block {
-  max-width: 30em;
-  border-top: 1px solid #dee0e2;
-  padding: 1em 0.5em 1em 0em; }
-
-.summary_group {
-  width: 45%;
-  padding-left: 20px;
-  display: inline-block;
-  vertical-align: text-top; }
-
-.change, .change:hover, .change:focus, .change:visited {
-  color: #0b0c0c;
-  background: #d0d3d6; }
-
-.summary_block h3 {
-  width: 33%;
-  display: inline-block;
-  vertical-align: top; }
-
-.container-confirmed {
-  color: white;
-  background-color: #28a197;
-  padding: 0px 0px;
-  text-align: center;
-  vertical-align: middle;
-  float: left;
-  width: 100%; }
-
-i.flaticon-checked21 {
-  padding-right: 22px;
-  color: white; }
-
-i {
-  padding-right: 15px;
+#filter-block .container-head {
+  padding: 10px;
   font-weight: bold; }
 
-.reference {
-  margin-top: 15px !important; }
+#filter-block .container {
+  background-color: white;
+  padding: 6px; }
 
-.error_div {
-  border-left: 5px solid #b10e1e;
-  padding-left: 15px; }
+#filter-block ul {
+  list-style-type: none;
+  padding: 0; }
 
-.error_message {
-  color: #b10e1e;
-  font-weight: bold; }
+#filter-block li {
+  padding: 7px;
+  border-bottom: 1px solid #dee0e2; }
 
-/* JQuery Tabs */
-#tabs {
-  font-family: "nta", Arial, sans-serif !important;
-  font-weight: normal !important;
-  border: none !important;
-  margin-bottom: 25px; }
-
-.ui-tabs-panel {
-  border: 1px solid #bfc1c3 !important; }
-
-.ui-widget-header {
-  border: 0px !important;
-  background: none !important; }
-
-.ui-widget-content {
-  font-size: 18px !important; }
-
-ul.ui-tabs-nav {
-  margin-bottom: 0px !important; }
-
-.ui-tabs .ui-tabs-nav li {
-  display: block;
-  float: none;
-  position: relative;
-  background: #dee0e2;
-  border: 1px solid #dee0e2;
-  padding: 18px 30px 15px 45px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  color: #2e8aca !important; }
-
-.ui-tabs .ui-tabs-nav li a:focus {
-  background: none; }
-
-.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
-  font-weight: normal !important; }
-
-.ui-state-active {
-  background-color: #fff !important;
-  border-color: #bfc1c3 !important;
-  font-weight: normal !important; }
-
-.ui-state-default a {
-  color: #2e8aca !important;
-  font-weight: normal !important;
-  text-decoration: underline !important; }
-
-.ui-tabs .ui-tabs-nav li a:hover {
-  background-color: #bfc1c3;
-  text-decoration: underline;
-  color: #2e8aca !important; }
-
-.ui-tabs-panel a:link {
-  color: #005ea5 !important; }
-
-.application-notice .info-notice {
-  border-left: 10px solid #bfc1c3 !important;
-  margin-bottom: 1em !important; }
-
-.el_option {
-  width: 100%;
-  height: 35px;
-  font-size: 17px;
-  text-align: left;
-  margin-bottom: 2px; }
+#filter-block li input {
+  margin-right: 5px; }
