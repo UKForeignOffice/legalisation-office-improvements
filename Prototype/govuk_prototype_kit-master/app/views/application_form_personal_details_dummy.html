@@ -9,7 +9,7 @@ Personal Details
 <main id="content" role="main">
     {{>pagehead}}
 
-    <h1 class="heading-xlarge">Your personal details</h1>
+    <h1 class="heading-xlarge">Your details</h1>
 
     <div class="form-group">
         <label for="first-name" class="form-label-bold">First name</label>
@@ -24,12 +24,11 @@ Personal Details
     </div>
 
     <div class="form-group">
-        <label for="phone" class="form-label-bold">Telephone number</label>
-        <span class="form-hint">Can be landline or mobile. Find your international code from the selector</span>
-        <input type="tel" id="phone" class="form-control" autocomplete="off"   style="width: 100%" value="03700 002244">
-        <!--<span id="valid-msg" class="hide">✓ Valid</span>-->
-        <!--<span id="error-msg" class="hide">Invalid number</span>-->
+        <label for="phone-number" class="form-label-bold">Telephone number</label>
+        <span class="form-hint">Can be landline or mobile</span>
+        <input type="tel" class="form-control phone" id="phone-number" value="03700 00 22 44">
     </div>
+
     <div class="form-group">
         <label for="email" class="form-label-bold">Email address</label>
         <span class="form-hint">We will send confirmation of your application here</span>

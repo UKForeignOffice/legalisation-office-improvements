@@ -1,0 +1,480 @@
+{{<layout}}
+
+{{$pageTitle}}
+Document Check
+{{/pageTitle}}
+
+{{$content}}
+
+<main id="content" role="main">
+    {{>pagehead}}
+
+    <h1 class="heading-xlarge">Select your documents</h1>
+    <div class="filtering">
+        <div class="filter-form-table column-third">
+            <div class="inner-block" id="selected-block">
+                <div class="container-head">Selected Documents</div>
+                <div class="container">
+                    <ul id="selected-docs-list">
+
+                    </ul>
+                </div>
+            </div>
+            <div class="inner-block" id="search-block">
+                <div class="container-head">Search <a href="javascript:clearTableSelection()" class="link" style="float: right;font-weight: normal; font-size:16px;">Clear Results</a></div>
+                <div class="container">
+                    <form id="search-table-form" action="javascript:searchTable(this);">
+                        <label for="search-filter" class="visuallyhidden"></label>
+                        <input type="text" name="q" id="search-filter" title="Search">
+                    </form>
+                </div>
+            </div>
+
+            <div class="inner-block" id="filter-block" >
+
+                <div class="container-head">Categories <a href="javascript:clearTableSelection()" class="link" style="float: right;font-weight: normal; font-size:16px;">Clear Selection</a></div>
+                <div class="container">
+                    <select id="catagory_dropdown" style="width: 237px">
+                        <option value="none">Select a category</option>
+                        <option id="birth-checkbox"   value="Birth">Birth, Marriage, Death Documents <span style="float: right;">(9)</span> </option>
+                        <option id="business-checkbox"   value="Business">Business Documents <span style="float: right;">(8)</span> </option>
+                        <option id="court-checkbox"   value="Court">Court Documents <span style="float: right;">(10)</span> </option>
+                        <option id="education-checkbox"   value="Education">Educational Documents <span style="float: right;">(4)</span> </option>
+                        <option id="government-checkbox"   value="Government">Government Department Documents <span style="float: right;">(4)</span> </option>
+                        <option id="general-checkbox"   value="General">General Registry Office Documents<span style="float: right;">(1)</span> </option>
+                        <option id="identity-checkbox"   value="Identity">Identity Documents <span style="float: right;">(2)</span> </option>
+                        <option id="legal-checkbox"   value="Legal">Legal Documents <span style="float: right;">(6)</span> </option>
+                        <option id="medical-checkbox"   value="Medical">Medical Documents <span style="float: right;">(5)</span> </option>
+                        <option id="personal-checkbox"   value="Personal">Personal Documents e.g. Financial or Employment <span style="float: right;">(6)</span> </option>
+                        <option id="pet-checkbox"   value="Pet">Pet Export <span style="float: right;">(1)</span> </option>
+                        <option id="police-checkbox"   value="Police">Police Documents <span style="float: right;">(5)</span> </option>
+                        <option id="religious-checkbox"   value="Religious">Religious Document <span style="float: right;">(1)</span> </option>
+                        <option id="translation-checkbox"   value="Translation">Translation <span style="float: right;">(1)</span> </option>
+                        <option id="passport-checkbox"   value="Passport">Passport <span style="float: right;">(1)</span> </option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="filter-results column-two-thirds">
+            <p style="font-weight: bold">Select all of the documents below you want legalised.</p>
+            <hr>
+            <p>You have selected <span id="selected-count-table1" style="font-weight: bold">0</span> document(s).</p>
+
+            <table id="doc-table">
+                <thead>
+                <tr>
+                    <th>Document</th>
+                    <th class="actions">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="js-hidden" id="no_results">
+                    <th style="font-size:20px; font-style: italic;">No documents found.</th><th></th>
+                </tr>
+                <tr category="business"  search="ACRO Police Certificate">
+                    <th>ACRO Police Certificate</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="legal"  search="Affidavit">
+                    <th>Affidavit</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="business"  search="Articles of association">
+                    <th>Articles of association</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="personal"  search="Bank Statement">
+                    <th>Bank Statement</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="birth"  search="Baptism Certificate">
+                    <th>Baptism Certificate</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="birth"  search="Birth Certificate">
+                    <th>Birth Certificate</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="business"  search="Certificate of Incorporation">
+                    <th>Certificate of Incorporation</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="business"  search="Certificate of Freesale">
+                    <th>Certificate of Freesale</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="business"  search="Certificate of Memorandum">
+                    <th>Certificate of Memorandum</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="birth"  search="Certificate of Naturalisation">
+                    <th>Certificate of Naturalisation</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="identity"  search="Certificate of No Impediment">
+                    <th>Certificate of No Impediment</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="business"  search="Chamber of Commerce Document">
+                    <th>Chamber of Commerce Document</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="legal"  search="Change of Name Deed">
+                    <th>Change of Name Deed</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="general"  search="Civil Partnership Certificate">
+                    <th>Civil Partnership Certificate</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="business"  search="Companies House Document">
+                    <th>Companies House Document</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="birth"  search="Conversion of Civil Partnership to Marriage Certificate">
+                    <th>Conversion of Civil Partnership to Marriage Certificate</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="birth"  search="Coroners Report">
+                    <th>Coroners Report</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="court"  search="County Court Document">
+                    <th>County Court Document</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="court"  search="Court Document">
+                    <th>Court Document</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="court"  search="Court of Bankruptcy Document">
+                    <th>Court of Bankruptcy Document</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="police"  search="Criminal Records Bureau (CRB) Document">
+                    <th>Criminal Records Bureau (CRB) Document</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="police"  search="Criminal Records Check">
+                    <th>Criminal Records Check</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="birth"  search="Cremation Certificate">
+                    <th>Cremation Certificate</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="birth"  search="Death Certificate">
+                    <th>Death Certificate</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="court"  search="Decree Absolute">
+                    <th>Decree  Absolute</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="court"  search="Decree Nisi">
+                    <th>Decree  Nisi</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="education"  search="Degree Certificate or Transcript (UK)">
+                    <th>Degree Certificate or Transcript (UK)</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="business"  search="Department of Business, Innovation and Skills (BIS) Document">
+                    <th>Department of Business, Innovation and Skills (BIS) Document</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="government"  search="Department of Health Document">
+                    <th>Department of Health Document</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="education"  search="Diploma">
+                    <th>Diploma</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="police"  search="Disclosure Scotland Document">
+                    <th>Disclosure Scotland Document</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="medical"  search="Doctor’s Letter">
+                    <th>Doctor’s Letter</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="identity"  search="Driving Licence (Copy)">
+                    <th>Driving Licence (Copy)</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="education"  search="Educational Certificate (UK)">
+                    <th>Educational Certificate (UK)</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="court"  search="Family Division of the High Court of Justice Document">
+                    <th>Family Division of the High Court of Justice Document</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="police"  search="Fingerprints Document">
+                    <th>Fingerprints Document</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="medical"  search="Fit Note">
+                    <th>Fit Note</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="government"  search="Government Issued Document">
+                    <th>Government Issued Document</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="court"  search="Grant of Probate">
+                    <th>Grant of Probate</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="court"  search="High Court of Justice Document">
+                    <th>High Court of Justice Document</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="government"  search="HM Revenue and Customs (HMRC) Document">
+                    <th>HM Revenue and Customs (HMRC) Document</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="government"  search="Home Office Document">
+                    <th>Home Office Document</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="legal"  search="Last Will and Testament">
+                    <th>Last Will and Testament</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="personal"  search="Letter from an Employer">
+                    <th>Letter from an Employer</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="personal"  search="Letter of Enrolment">
+                    <th>Letter of Enrolment</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="personal"  search="Letter of Invitation (to live in the UK)">
+                    <th>Letter of Invitation (to live in the UK)</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="birth"  search="Letter of No Trace">
+                    <th>Letter of No Trace</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="birth"  search="Marriage Certificate">
+                    <th>Marriage Certificate</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="medical"  search="Medical Report">
+                    <th>Medical Report</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="medical"  search="Medical Test Results">
+                    <th>Medical Test Results</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="legal"  search="Name Change Deed or Document">
+                    <th>Name Change Deed or Document</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="passport"  search="Passport">
+                    <th>Passport</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="pet"  search="Pet Export Document from the Department of Environment, Food and Rural Affairs (DEFRA)">
+                    <th>Pet Export Document from the Department of Environment, Food and Rural Affairs (DEFRA)</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="police"  search="Police Disclosure Document">
+                    <th>Police Disclosure Document</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="legal"  search="Power of Attorney">
+                    <th>Power of Attorney</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="court"  search="Probate">
+                    <th>Probate</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="personal"  search="Reference from an Employer">
+                    <th>Reference from an Employer</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="religious"  search="Religious Document">
+                    <th>Religious Document</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="education"  search="School Document">
+                    <th>School Document</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="court"  search="Sheriff Court Document">
+                    <th>Sheriff Court Document</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="medical"  search="Sick Note">
+                    <th>Sick Note</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="legal"  search="Statutory Declaration">
+                    <th>Statutory Declaration</th>
+                    <th><a class="button add" >Add</a>
+                        <a class="button remove js-hidden" >Remove</a>
+                    </th>
+                </tr>
+                <tr category="personal"  search="Utility Bill">
+                    <th>Utility Bill</th>
+                    <th><a class="button add">Add</a>
+                        <a class="button remove js-hidden">Remove</a>
+                    </th>
+                </tr>
+                <tr category="translation"  search="Translation of a document">
+                    <th>Translation of a document</th>
+                    <th><a class="button add">Add</a>
+                        <a class="button remove js-hidden">Remove</a>
+                    </th>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+
+    </div>
+    <p style="float: left;clear: both;">
+        You have selected <span id="selected-count-table2" style="font-weight: bold">0</span> document(s).
+    </p>
+
+    <div class="form-group">
+        <a href="eligibility_doc_summary_old" class="button big">Continue</a>
+        <p><a href="application_form_type" class="link-back">Back</a></p>
+    </div>
+
+
+</main>
+
+{{/content}}
+
+{{/layout}}
+<script src="/public/javascripts/jquery-ui.js"></script>

@@ -1,3 +1,8 @@
+var count = 0 ;
+var selectedDocCount = 0;
+var selectedDocCountTable = 0;
+var countTable = 0 ;
+
 function ShowHideContent() {
     var self = this;
 
@@ -131,9 +136,15 @@ $(document).ready(function() {
     toggleContent.showHideRadioToggledContent();
     toggleContent.showHideCheckboxToggledContent();
 
+
+
 });
 
 $(window).load(function() {
+
+    selectedDocCount = $("#doc_form input[type=checkbox]:checked").length;
+    $('#selected-doc-count1').text(""+selectedDocCount);
+    $('#selected-doc-count2').text(""+selectedDocCount);
 
     // Only set focus for the error example pages
     if ($(".js-error-example").length) {
@@ -169,7 +180,11 @@ $(function() {
     $('body').on('click', '#addScnt', function() {
         $('<div id="row">'+
         '<div class="col1"> ' +
-        '<label for="otherCountries[1]">Country name</label>' +
+        '<label for="otherCountriesNumber">No. of documents</label>' +
+        '<input type="number" id="otherCountriesNumber" name="otherCountriesNumber" value="" class="number"/>' +
+        '</div>' +
+        '<div class="col2">' +
+        '<label for="otherCountries[1]">Country name (optional)</label>' +
         '<div class="typeahead-container">' +
         '<div class="typeahead-field">' +
         '<span class="typeahead-query">' +
@@ -177,10 +192,6 @@ $(function() {
         '</span>' +
         '</div>' +
         '</div>' +
-        '</div>' +
-        '<div class="col2">' +
-        '<label for="otherCountriesNumber">No. of documents</label>' +
-        '<input type="number" id="otherCountriesNumber" name="otherCountriesNumber" value="" class="number"/>' +
         '</div>' +
         '<div id="remove-control"><a href id="remScnt">Remove</a></div>' +
         '</div>').appendTo(scntDiv);
@@ -332,19 +343,13 @@ $(function(){
     }
 });
 
-//Mailcheck code
-
-$.getScript("mailcheck/mailcheck.min.js", function(){
-
-});
-
 var domains = ['gmail.com', 'aol.com'];
-var secondLevelDomains = ['hotmail']
+var secondLevelDomains = ['hotmail'];
 var topLevelDomains = ["com", "net", "org"];
 
 var superStringDistance = function(string1, string2) {
     // a string distance algorithm of your choosing
-}
+};
 
 
 $('#email').on('blur', function() {
@@ -733,7 +738,7 @@ function searchStringInArray (str) {
 
     for (var j=0; j<strArray.length; j++) {
         if(strArray[j].toLowerCase().search(str) > -1){
-            resultsArray.push(strArray[j]);
+            resultsArray.push(strArray[j].trim());
         }
     }
     return resultsArray;
@@ -846,11 +851,11 @@ function chooseService() {
     if (selectedService.match('Standard')) {
         window.location.href = 'application_eligibility_skip';
     } else if (selectedService.match('Business Premium')) {
-        window.location.href = '#';
+        window.location.href = 'https://www.gov.uk/legalisation-premium-service';
     }
 }
 
-var count = 0 ;
+//Categories control - main filter page
 $(".filter-form input[type=checkbox]").change(function() {
     var category = this.value.toLowerCase();
 
@@ -869,7 +874,27 @@ $(".filter-form input[type=checkbox]").change(function() {
     }
 });
 
-var selectedDocCount = 0;
+//Categories control - new filter page (with table)
+$(".filter-form-table input[type=checkbox]").change(function() {
+    var category = this.value.toLowerCase();
+
+    if(this.checked) {
+        $(".filter-results tr").removeClass('js-hidden');
+        $(".filter-results tr[category="+category+"]").addClass('select');
+        $( ".filter-results tbody tr" ).not( ".select" ).addClass('js-hidden');
+        countTable++;
+    } else {
+        countTable--;
+        if (countTable > 0) {
+            $(".filter-results tr[category=" + category + "]").removeClass('select').addClass('js-hidden');
+        } else {
+            $(".filter-results tr").removeClass('js-hidden').removeClass('select');
+        }
+    }
+    $('#no_results').removeClass('js-hidden').addClass('js-hidden');
+});
+
+
 $('.filter-results input[type=checkbox]').change(function() {
     if(this.checked) {
         selectedDocCount++;
@@ -882,9 +907,176 @@ $('.filter-results input[type=checkbox]').change(function() {
     }
 });
 
-
 function clearSelection() {
     $('.filter-form input[type=checkbox]').prop('checked', false);
     $(".filter-results label").removeClass('js-hidden').removeClass('select');
+    $('#search-filter-form input').val('');
     count=0;
 }
+
+function clearTableSelection() {
+    $('.filter-form-table input[type=checkbox]').prop('checked', false);
+    $(".filter-results tbody tr").removeClass('js-hidden').removeClass('select');
+    $('#no_results').addClass('js-hidden');
+    $('#search-table-form input').val('');
+    count=0;
+}
+
+// Main Filters page search control
+function searchF() {
+    var q = $('#search-filter-form input').val();
+
+    var docs = searchStringInArray(q.toLowerCase());
+    var inputs = $('.filter-results input[type=checkbox]');
+
+    $('.filter-results label').addClass('js-hidden').removeClass('select');
+    $('.filter-form input[type=checkbox]').prop('checked', false);
+    count = 0;
+
+    docs.forEach(function (doc) {
+        for(i=0; i<inputs.length; i++) {
+            if(doc == inputs[i].getAttribute('search')) {
+                $('label[for="'+ inputs[i].id+ '"').removeClass('js-hidden');
+            }
+        }
+    });
+}
+
+// New (with table) Filters page search control
+function searchTable() {
+    var q = $('#search-table-form input').val();
+
+    var docs = searchStringInArray(q.toLowerCase());
+    var tableRows = $('.filter-results tbody tr');
+
+    tableRows.addClass('js-hidden').removeClass('select');
+    //$('.filter-form input[type=checkbox]').prop('checked', false);
+    count = 0;
+    if(docs.length == 0){
+        $('#no_results').removeClass('js-hidden');
+    } else {
+        docs.forEach(function (doc) {
+            for (i = 0; i < tableRows.length; i++) {
+                if (doc == tableRows[i].getAttribute('search')) {
+                    $(tableRows[i]).removeClass('js-hidden');
+                }
+            }
+        });
+        $('#no_results').removeClass('js-hidden').addClass('js-hidden');
+    }
+}
+
+$("a.add").click(function() {
+    $(this).addClass('js-hidden');
+    $(this).closest("tr").find('a.remove').removeClass('js-hidden');
+    var removeid= $(this).closest("tr").find('a.remove').id;
+    var doc = $(this).closest("tr").attr('search');
+
+    $("#selected-docs-list").append('<li id="'+doc.replace(/ |\(|\)|,/g, "_")+'">'+doc+'</li>');
+    selectedDocCountTable++;
+    $('#selected-count-table1').text(""+selectedDocCountTable);
+    $('#selected-count-table2').text(""+selectedDocCountTable);
+});
+
+$("a.remove").click(function() {
+    console.log('hello');
+    $(this).addClass('js-hidden');
+    $(this).closest("tr").find('a.add').removeClass('js-hidden');
+    var doc = $(this).closest("tr").attr('search');
+
+    $("#"+doc.replace(/ |\(|\)|,/g, "_")).remove();
+
+    selectedDocCountTable--;
+    $('#selected-count-table1').text(""+selectedDocCountTable);
+    $('#selected-count-table2').text(""+selectedDocCountTable);
+});
+
+function remove_link(doc) {
+    console.log('hello'+ doc);
+    $('tr[search="' + doc + '"]').closest("tr").find('a.remove4').addClass('js-hidden');
+    $('tr[search="' + doc + '"]').closest("tr").find('a.add4').removeClass('js-hidden');
+
+    $("#"+doc.replace(/ |\(|\)|,/g, "_")).remove();
+
+    selectedDocCountTable--;
+    $('#selected-count-table1').text(""+selectedDocCountTable);
+    $('#selected-count-table2').text(""+selectedDocCountTable);
+
+
+}
+
+$("a.add4").click(function() {
+    $(this).addClass('js-hidden');
+    $(this).closest("tr").find('a.remove4').removeClass('js-hidden');
+    var removeid= $(this).closest("tr").find('a.remove4').id;
+    var doc = $(this).closest("tr").attr('search');
+
+    $("#selected-docs-list").append('<li id="'+doc.replace(/ |\(|\)|,/g, "_")+'">'+doc+
+    ' </br> <a class="remove_link button" id="remove_link" doc="'+doc.replace(/ |\(|\)|,/g, "_")+'" onclick="remove_link(\''+doc+'\')">Remove</a></li>');
+    selectedDocCountTable++;
+    $('#selected-count-table1').text(""+selectedDocCountTable);
+    $('#selected-count-table2').text(""+selectedDocCountTable);
+});
+
+$("a.remove4").click(function() {
+    $(this).addClass('js-hidden');
+    $(this).closest("tr").find('a.add4').removeClass('js-hidden');
+    var doc = $(this).closest("tr").attr('search');
+
+    $("#"+doc.replace(/ |\(|\)|,/g, "_")).remove();
+
+    selectedDocCountTable--;
+    $('#selected-count-table1').text(""+selectedDocCountTable);
+    $('#selected-count-table2').text(""+selectedDocCountTable);
+});
+//Filters 5
+
+function remove_link5(doc) {
+    $('tr[search="' + doc + '"]').closest("tr").find('a.remove5').addClass('js-hidden');
+    $('tr[search="' + doc + '"]').closest("tr").find('a.add5').removeClass('js-hidden');
+    console.log(doc.replace(/ |\(|\)/g, "_"));
+    $("#"+doc.replace(/ |\(|\)|,/g, "_")).remove();
+
+    selectedDocCountTable--;
+    $('#selected-count-table1').text(""+selectedDocCountTable);
+    $('#selected-count-table2').text(""+selectedDocCountTable);
+
+
+}
+$("a.add5").click(function() {
+    $(this).addClass('js-hidden');
+    $(this).closest("tr").find('a.remove5').removeClass('js-hidden');
+    var removeid= $(this).closest("tr").find('a.remove4').id;
+    var doc = $(this).closest("tr").attr('search');
+
+    var innerHTML = $('#selected_document_div').html();
+    innerHTML+='<div class="selected_Document" id="'+doc.replace(/ |\(|\)|,/g, "_")+'">'+doc+
+    ' </br> <a class="remove_link button" id="remove_link" onclick="remove_link5(\''+doc+'\')">Remove</a></div>';
+    $('#selected_document_div').html(innerHTML);
+    $('#selected_document_div2').html(innerHTML);
+
+    selectedDocCountTable++;
+    $('#selected-count-table1').text(""+selectedDocCountTable);
+    $('#selected-count-table2').text(""+selectedDocCountTable);
+});
+
+$("a.remove5").click(function() {
+    $(this).addClass('js-hidden');
+    $(this).closest("tr").find('a.add5').removeClass('js-hidden');
+    var doc = $(this).closest("tr").attr('search');
+    $("#"+doc.replace(/ |\(|\)|,/g, "_")).remove();
+
+    selectedDocCountTable--;
+    $('#selected-count-table1').text(""+selectedDocCountTable);
+    $('#selected-count-table2').text(""+selectedDocCountTable);
+});
+
+$('select').on('change', function (e) {
+    var optionSelected = $("option:selected", this);
+    var valueSelected = this.value.toLowerCase();
+    console.log(valueSelected);
+    clearTableSelection();
+    $(".filter-results tr").removeClass('js-hidden');
+    $(".filter-results tr[category="+valueSelected+"]").addClass('select');
+    $( ".filter-results tbody tr" ).not( ".select" ).addClass('js-hidden');
+});

@@ -11,7 +11,7 @@ Document Details
 
     <h1 class="heading-xlarge">Document Details</h1>
     <p class="text">
-        Please state the countries (overseas) where the documents are to be used, as well as the number of documents.
+        Please enter the number of documents you want to legalise and (optionally) the countries where the documents will be used.
     </p>
 
     <div class="form-group">
@@ -22,18 +22,18 @@ Document Details
                 <div id="countries-list">
                     <div id="row">
                         <div class="col1">
-                            <label for="otherCountries">Country name</label>
+                            <label for="otherCountriesNumber">No. of documents</label>
+                            <input type="number" id="otherCountriesNumber" name="otherCountriesNumber" value="" class="number"/>
+                        </div>
+                        <div class="col2">
+                            <label for="otherCountries">Country name (optional)</label>
                             <div class="typeahead-container">
                                 <div class="typeahead-field">
                                 <span class="typeahead-query">
                                     <input type="text" id="otherCountries" name="otherCountries" value="" autocomplete="off" class="text country-autocomplete long validate tt-query" style="position: relative; vertical-align: top; background-color: transparent;">
                                 </span>
                                 </div>
-                                </div>
-                                </div>
-                        <div class="col2">
-                            <label for="otherCountriesNumber">No. of documents</label>
-                            <input type="number" id="otherCountriesNumber" name="otherCountriesNumber" value="" class="number"/>
+                            </div>
                         </div>
                         <div id="remove-control">
                             <a href id="remScnt">Remove</a>

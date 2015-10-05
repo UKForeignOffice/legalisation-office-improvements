@@ -32,6 +32,11 @@ module.exports = {
             res.render('application_eligibility', {'address' : 'The Old Bank, Old Market Place, Altrincham, Trafford WA144PA' , 'text' : 'Oh dear'});
         });
 
+        app.get('/eligibility_doc_summary', function (req, res) {
+            var data = req.query;
+            res.render('eligibility_doc_summary',
+                data)
+        });
 
     }
 };
