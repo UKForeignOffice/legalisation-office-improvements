@@ -14,9 +14,15 @@ Address Details
     <h3 class="heading-medium">Where would you like your legalised documents to be returned?</h3>
     <form id="address_form">
         <div class="form-group">
-            <label class="form-label" for="full-name">Full name</label>
-            <span class="form-hint">Name of the person you would like the documents returned to</span>
-            <input class="form-control" id="full-name" type="text">
+            <label class="form-label" for="first-name">First name</label>
+            <span class="form-hint">First name of the person you would like the documents returned to</span>
+            <input class="form-control" id="first-name" type="text">
+        </div>
+
+        <div class="form-group">
+            <label class="form-label" for="last-name">Last name</label>
+            <span class="form-hint">Last name of the person you would like the documents returned to</span>
+            <input class="form-control" id="last-name" type="text">
         </div>
 
         <div class="form-group">
@@ -24,11 +30,10 @@ Address Details
             <input class="form-control-1-8 postcode" id="postcode" type="text">
         </div>
 
-        <div class="form-group" style="margin-bottom: 5px">
-            <a class="button find-address" id="find-address" style="margin-bottom: 15px">Find address</a>
-
+        <div class="form-group">
+            <a class="button find-address" id="find-address">Find address</a>
             <div class="js-hidden" id="address-list-group">
-                <label class="form-label visuallyhidden" for="address-list">Pick an address</label>
+                <label class="form-label visuallyhidden" for="first-name">Pick an address</label>
                 <select class="form-select" id="address-list" name="address">
                     <option value="0">Please select your address</option>
                     <option value="1">30A Culver Road, St Albans</option>
@@ -39,12 +44,8 @@ Address Details
                     <option value="6">35A Culver Road, St Albans</option>
                 </select>
             </div>
-
+            <a class="link address-manual" id="address-manual">Enter your address manually</a>
         </div>
-        <div style="display: block; margin-bottom: 25px">
-            <a class="link address-manual" id="address-manual"  style="float: none;">Enter your address manually</a>
-        </div>
-
 
 
 
@@ -69,7 +70,6 @@ Address Details
             </div>
         </div>
 
-
     </form>
     <!-- Alternative Return Address-->
     <p class="text">Where would you like us to return your documents in the event
@@ -92,56 +92,56 @@ Address Details
 
                 <div class="panel-indent js-hidden" id="different-address-section">
                     <div class="form-group">
-                    <label class="form-label" for="alt_full_name">Full name</label>
-                    <span class="form-hint">Name of the person you would like the documents returned to in case of a problem</span>
-                    <input class="form-control" id="alt_full_name" type="text">
+                    <label class="form-label" for="alt_first_name">First name</label>
+                    <span class="form-hint">First name of the person you would like the documents returned to in case of a problem</span>
+                    <input class="form-control" id="alt_first_name" type="text">
                 </div>
-
-                <div class="form-group">
-                    <label class="form-label" for="alt_postcode">Postcode</label>
-                    <input class="form-control-1-8" id="alt_postcode" type="text">
-                </div>
-                <div class="form-group" style="margin-bottom: 5px">
-                    <a class="button find-address" id="find-address-alt" style="margin-bottom: 15px">Find address</a>
-
-                    <div class="form-group js-hidden" id="address-list-group-alt">
-                        <label class="form-label visuallyhidden" for="address-list-alt">Pick an address</label>
-                        <select class="form-select" id="address-list-alt" name="address-alt">
-                            <option value="0">Please select your address</option>
-                            <option value="1">30A Culver Road, St Albans</option>
-                            <option value="2">31A Culver Road, St Albans</option>
-                            <option value="3">32A Culver Road, St Albans</option>
-                            <option value="4">33A Culver Road, St Albans</option>
-                            <option value="5">34A Culver Road, St Albans</option>
-                            <option value="6">35A Culver Road, St Albans</option>
-                        </select>
-                    </div>
-
-                </div>
-                    <div style="display: block; margin-bottom: 25px">
-                        <a class="link address-manual" id="address-manual-alt" style="float: none;">Enter your address manually</a>
-                    </div>
-
-                <div class="form-group js-hidden" id="address-details-group-alt">
-                    <label class="form-label">Street</label>
-                    <p><input class="form-control" type="text" id="address1-alt"></p>
-                    <p><input class="form-control" type="text"></p>
-                    <p><input class="form-control" type="text"></p>
-
                     <div class="form-group">
-                        <label class="form-label">Town</label>
-                        <input class="form-control" type="text" id="town-alt">
+                        <label class="form-label" for="alt_last_name">Last name</label>
+                        <span class="form-hint">Last name of the person you would like the documents returned to in case of a problem</span>
+                        <input class="form-control" id="alt_last_name" type="text">
                     </div>
                     <div class="form-group">
-                        <label class="form-label">County (optional)</label>
-                        <input class="form-control" type="text" id="county-alt">
+                        <label class="form-label" for="alt_postcode">Postcode</label>
+                        <input class="form-control-1-8" id="alt_postcode" type="text">
+                    </div>
+                    <div class="form-group">
+                        <a class="button find-address" id="find-address-alt">Find address</a>
+                        <div class="form-group js-hidden" id="address-list-group-alt">
+                            <label class="form-label visuallyhidden" for="first-name">Pick an address</label>
+                            <select class="form-select" id="address-list-alt" name="address-alt">
+                                <option value="0">Please select your address</option>
+                                <option value="1">30A Culver Road, St Albans</option>
+                                <option value="2">31A Culver Road, St Albans</option>
+                                <option value="3">32A Culver Road, St Albans</option>
+                                <option value="4">33A Culver Road, St Albans</option>
+                                <option value="5">34A Culver Road, St Albans</option>
+                                <option value="6">35A Culver Road, St Albans</option>
+                            </select>
+                        </div>
+                        <a class="link address-manual" id="address-manual-alt">Enter your address manually</a>
                     </div>
 
-                    <div class="form-group">
-                        <label class="form-label">Country</label>
-                        <select class="form-select country" type="text" id="country-alt"></select>
+                    <div class="form-group js-hidden" id="address-details-group-alt">
+                        <label class="form-label">Street</label>
+                        <p><input class="form-control" type="text" id="address1-alt"></p>
+                        <p><input class="form-control" type="text"></p>
+                        <p><input class="form-control" type="text"></p>
+
+                        <div class="form-group">
+                            <label class="form-label">Town</label>
+                            <input class="form-control" type="text" id="town-alt">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">County (optional)</label>
+                            <input class="form-control" type="text" id="county-alt">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Country</label>
+                            <select class="form-select country" type="text" id="country-alt"></select>
+                        </div>
                     </div>
-                </div>
 
                 </div>
             </fieldset>

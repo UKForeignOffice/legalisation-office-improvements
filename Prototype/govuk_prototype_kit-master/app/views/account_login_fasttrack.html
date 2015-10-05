@@ -1,0 +1,34 @@
+{{<layout}}
+
+{{$pageTitle}}
+Application Type
+{{/pageTitle}}
+
+{{$content}}
+
+<main id="content" role="main">
+    {{>pagehead}}
+
+
+    <h1 class="heading-xlarge">Sign in to the legalisation service</h1>
+
+    <div class="form-group">
+        <label for="username" class="form-label-bold">Email address</label>
+        <input class="form-control" id="username" name="username" type="text">
+    </div>
+
+    <div class="form-group">
+        <label for="password" class="form-label-bold">Password</label>
+        <input class="form-control" id="password" name="password" type="text">
+    </div>
+
+    <div class="form-group">
+        <p><a href="account_documents" class="button">Sign in</a><a href="account_forgot_password" class="link">I've forgotten my password</a></p>
+        <p><a href="application_form_type" class="link-back">Back</a></p>
+    </div>
+
+</main>
+
+{{/content}}
+
+{{/layout}}

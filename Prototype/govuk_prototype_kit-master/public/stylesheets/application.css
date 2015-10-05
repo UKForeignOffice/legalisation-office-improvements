@@ -1798,15 +1798,16 @@ ul {
   padding-left: 40px;
   padding-bottom: 20px; }
 
-table.summary-table {
+table.summary-table, table.acc-summary-table {
   width: 70%; }
+
+table.acc-summary-table-combined {
+  width: 75%; }
 
 td.summary-table-cell-label {
   width: 33%;
   vertical-align: top;
-  border-top: 1px solid #bfc1c3;
-  font-size: 0.9em;
-  font-weight: bold; }
+  border-top: 1px solid #bfc1c3; }
 
 td.summary-table-cell-content {
   width: 33%;
@@ -1820,6 +1821,38 @@ td.summary-table-cell-link {
   border-top: 1px solid #bfc1c3;
   text-align: right;
   padding-right: 0em; }
+
+th.acc-summary-table-cell-date, td.acc-summary-table-cell-date {
+  width: 22%;
+  vertical-align: top; }
+
+th.acc-summary-table-cell-service, td.acc-summary-table-cell-service {
+  width: 10%;
+  vertical-align: top; }
+
+th.acc-summary-table-cell-name, td.acc-summary-table-cell-name {
+  width: 22%;
+  vertical-align: top;
+  padding-left: 3em; }
+
+th.acc-summary-table-cell-ref, td.acc-summary-table-cell-ref {
+  width: 15%;
+  vertical-align: top;
+  padding-left: 3em; }
+
+th.acc-summary-table-cell-status, td.acc-summary-table-cell-status {
+  width: 15%;
+  vertical-align: top;
+  text-align: right; }
+
+th.acc-summary-table-cell-link, td.acc-summary-table-cell-link {
+  width: 15%;
+  vertical-align: top;
+  text-align: right;
+  padding-right: 0em; }
+
+td.acc-summary-table-cell-date, td.acc-summary-table-cell-service, td.acc-summary-table-cell-name, td.acc-summary-table-cell-ref, td.acc-summary-table-cell-link, td.acc-summary-table-cell-status {
+  border-top: 1px solid #bfc1c3; }
 
 /** Search **/
 #search-form input.submit {
@@ -2793,35 +2826,28 @@ td.summary-table-cell-link {
   padding-left: 0;
   margin-bottom: 20px; }
 
-#filter-block, #search-block, #selected-block {
+#filter-block, #search-block, #payment-block, #service-filter-block, #status-filter-block {
   background-color: #dee0e2;
   padding: 5px;
   margin-bottom: 20px; }
 
-#filter-block .container-head, #search-block .container-head, #selected-block .container-head {
+#filter-block .container-head, #search-block .container-head, #payment-block .container-head, #service-filter-block .container-head, #status-filter-block .container-head {
   padding: 10px;
   font-weight: bold; }
 
-#filter-block .container, #search-block .container, #selected-block .container {
+#filter-block .container, #search-block .container, #payment-block .container, #service-filter-block .container, #status-filter-block .container {
   background-color: white;
   padding: 6px; }
 
-#selected-block .container {
-  padding: 0; }
-
-#filter-block ul, #selected-block ul {
+#filter-block ul, #service-filter-block ul, #status-filter-block ul {
   list-style-type: none;
   padding: 0; }
 
-#filter-block li {
+#filter-block li, #service-filter-block li, #status-filter-block li {
   padding: 7px;
   border-bottom: 1px solid #dee0e2; }
 
-#selected-block li {
-  padding: 13px;
-  border-bottom: 1px solid #dee0e2; }
-
-#filter-block li input {
+#filter-block li input, #service-filter-block li input, #status-filter-block li input {
   margin-right: 5px; }
 
 #search-block #search-form {
@@ -2852,49 +2878,16 @@ td.summary-table-cell-link {
   padding-top: 10px;
   height: 59px; }
 
-a.remove, a.remove4, a.remove5 {
-  background-color: #b10e1e !important;
-  -webkit-box-shadow: 0 2px 0 #4C0000;
-  -moz-box-shadow: 0 2px 0 #4C0000;
-  box-shadow: 0 2px 0 #4C0000; }
-
-#doc-table {
-  table-layout: fixed; }
-
-#doc-table thead th {
-  font-size: 20px; }
-
-.actions {
-  width: 80px; }
-
-.phone {
-  width: 25%; }
-
-#remove_link {
-  color: #005ea5 !important;
-  text-decoration: underline;
-  background-color: white !important;
-  box-shadow: none;
-  font-size: 16px;
-  margin: 0px !important;
-  padding: 0px !important; }
-
-.selected_Document {
-  width: 48%;
-  float: left;
-  border: 2px solid #dee0e2;
-  margin-left: -3px;
-  background-color: white;
-  padding: 7px 0 0px 10px; }
-
-#selected_document_box2 {
-  width: 65%;
-  float: right;
-  margin-top: 20px;
-  margin-right: 13px;
-  padding: 6px;
-  background-color: #dee0e2; }
-
-#selected_document_box2 .container-head {
+.account-balance {
   font-weight: bold;
-  padding: 6px; }
+  font-size: x-large; }
+
+.businessService {
+  float: left;
+  width: 70%;
+  border-bottom: solid lightgray 1px;
+  margin-bottom: 20px; }
+
+.businessService-label {
+  margin-right: 50px !important;
+  margin-top: 20px; }

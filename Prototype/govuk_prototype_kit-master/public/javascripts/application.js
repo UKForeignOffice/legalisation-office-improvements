@@ -1,8 +1,3 @@
-var count = 0 ;
-var selectedDocCount = 0;
-var selectedDocCountTable = 0;
-var countTable = 0 ;
-
 function ShowHideContent() {
     var self = this;
 
@@ -119,6 +114,11 @@ function ShowHideContent() {
 
 $(document).ready(function() {
 
+    populateTable(table_data);
+    $('input[type=checkbox]').change(
+        function(){
+            filterTable(this);
+        });
     // Turn off jQuery animation
     jQuery.fx.off = true;
 
@@ -136,16 +136,9 @@ $(document).ready(function() {
     toggleContent.showHideRadioToggledContent();
     toggleContent.showHideCheckboxToggledContent();
 
-
-
 });
 
 $(window).load(function() {
-
-    selectedDocCount = $("#doc_form input[type=checkbox]:checked").length;
-    $('#selected-doc-count1').text(""+selectedDocCount);
-    $('#selected-doc-count2').text(""+selectedDocCount);
-
     // Only set focus for the error example pages
     if ($(".js-error-example").length) {
 
@@ -343,8 +336,14 @@ $(function(){
     }
 });
 
+//Mailcheck code
+
+$.getScript("mailcheck/mailcheck.min.js", function(){
+
+});
+
 var domains = ['gmail.com', 'aol.com'];
-var secondLevelDomains = ['hotmail'];
+var secondLevelDomains = ['hotmail']
 var topLevelDomains = ["com", "net", "org"];
 
 var superStringDistance = function(string1, string2) {
@@ -738,7 +737,7 @@ function searchStringInArray (str) {
 
     for (var j=0; j<strArray.length; j++) {
         if(strArray[j].toLowerCase().search(str) > -1){
-            resultsArray.push(strArray[j].trim());
+            resultsArray.push(strArray[j]);
         }
     }
     return resultsArray;
@@ -847,15 +846,22 @@ function dummyClick3(){
 
 function chooseService() {
     var selectedService = $('input[type=radio]:checked').val();
+    console.log(selectedService);
 
-    if (selectedService.match('Standard')) {
+    if (selectedService=='Standard Postal') {
         window.location.href = 'application_eligibility_skip';
-    } else if (selectedService.match('Business Premium')) {
-        window.location.href = 'https://www.gov.uk/legalisation-premium-service';
+    } else if (selectedService=='Business Premium') {
+        window.location.href = 'account_login_fasttrack';
+    }else if (selectedService == 'FT Standard') {
+        window.location.href = 'application_eligibility_skip';
+    }else if (selectedService =='FT Business Premium') {
+        window.location.href = 'account_documents';
+    }else if (selectedService==('FT Drop Off')) {
+        window.location.href = 'account_documents_MK';
     }
 }
 
-//Categories control - main filter page
+var count = 0 ;
 $(".filter-form input[type=checkbox]").change(function() {
     var category = this.value.toLowerCase();
 
@@ -874,27 +880,7 @@ $(".filter-form input[type=checkbox]").change(function() {
     }
 });
 
-//Categories control - new filter page (with table)
-$(".filter-form-table input[type=checkbox]").change(function() {
-    var category = this.value.toLowerCase();
-
-    if(this.checked) {
-        $(".filter-results tr").removeClass('js-hidden');
-        $(".filter-results tr[category="+category+"]").addClass('select');
-        $( ".filter-results tbody tr" ).not( ".select" ).addClass('js-hidden');
-        countTable++;
-    } else {
-        countTable--;
-        if (countTable > 0) {
-            $(".filter-results tr[category=" + category + "]").removeClass('select').addClass('js-hidden');
-        } else {
-            $(".filter-results tr").removeClass('js-hidden').removeClass('select');
-        }
-    }
-    $('#no_results').removeClass('js-hidden').addClass('js-hidden');
-});
-
-
+var selectedDocCount = 0;
 $('.filter-results input[type=checkbox]').change(function() {
     if(this.checked) {
         selectedDocCount++;
@@ -907,176 +893,156 @@ $('.filter-results input[type=checkbox]').change(function() {
     }
 });
 
+
 function clearSelection() {
     $('.filter-form input[type=checkbox]').prop('checked', false);
     $(".filter-results label").removeClass('js-hidden').removeClass('select');
-    $('#search-filter-form input').val('');
     count=0;
+    populateTable(table_data);
 }
 
-function clearTableSelection() {
-    $('.filter-form-table input[type=checkbox]').prop('checked', false);
-    $(".filter-results tbody tr").removeClass('js-hidden').removeClass('select');
-    $('#no_results').addClass('js-hidden');
-    $('#search-table-form input').val('');
-    count=0;
+var table_data=[
+    {
+        "Date":"20 September 2015",
+        "Service":"Standard",
+        "Name":"Joe Bloggs",
+        "Reference":"IR-12345",
+        "Status":"In Progress",
+        "Action":"Continue"
+    },
+    {
+        "Date":"19 September 2015",
+        "Service":"Standard",
+        "Name":"Mary Poppins",
+        "Reference":"IR-54321",
+        "Status":"Complete",
+        "Action":"View"
+    },
+    {
+        "Date":"01 August 2015",
+        "Service":"Standard",
+        "Name":"Dan Moody",
+        "Reference":"IR-99999",
+        "Status":"In Progress",
+        "Action":"Continue"
+    },
+    {
+        "Date":"01 August2015",
+        "Service":"Premium",
+        "Name":"Josephine Bloggs",
+        "Reference":"IR-12345",
+        "Status":"In Progress",
+        "Action":"Continue"
+    },
+    {
+        "Date":"10 July 2015",
+        "Service":"Premium",
+        "Name":"Andy Hamilton",
+        "Reference":"IR-54321",
+        "Status":"In Progress",
+        "Action":"Continue"
+    },
+    {
+        "Date":"09 July 2015",
+        "Service":"Premium",
+        "Name":"Mark Barlow",
+        "Reference":"IR-99999",
+        "Status":"In Progress",
+        "Action":"Continue"
+    },
+    {
+        "Date":"23 June 2015",
+        "Service":"Drop-off",
+        "Name":"Joe Bloggs",
+        "Reference":"IR-12345",
+        "Status":"Complete",
+        "Action":"View"
+    },
+    {
+        "Date":"20 June 2015",
+        "Service":"Drop-off",
+        "Name":"Joe Bloggs",
+        "Reference":"IR-54321",
+        "Status":"Complete",
+        "Action":"View"
+    },
+    {
+        "Date":"01 June 2015",
+        "Service":"Drop-off",
+        "Name":"Shaun Smith",
+        "Reference":"IR-99999",
+        "Status":"In Progress",
+        "Action":"Continue"
+    }
+];
+
+function populateTable(data){
+    var content='';
+    for(var i=0;i<data.length;i++){
+        content+='<tr>'+
+        '<td class="acc-summary-table-cell-date">'+data[i].Date+'</td>'+
+        '<td class="acc-summary-table-cell-service">'+data[i].Service+'</td>'+
+        '<td class="acc-summary-table-cell-name">'+data[i].Name+'</td>'+
+        '<td class="acc-summary-table-cell-ref">'+data[i].Reference+'</td>'+
+        '<td class="acc-summary-table-cell-status">'+data[i].Status+'</td>'+
+        '<td class="acc-summary-table-cell-link">'+ getLink(data[i].Action)+'</td>'+
+        '</tr>';
+    }
+    $('#summary-standard tbody').html(content);
+
 }
 
-// Main Filters page search control
-function searchF() {
-    var q = $('#search-filter-form input').val();
+function getLink(action){
+    return '<a href="#">'+action+'</a>';
+}
 
-    var docs = searchStringInArray(q.toLowerCase());
-    var inputs = $('.filter-results input[type=checkbox]');
+function get_filtered_table(table,givenkey,attr){
+    switch(givenkey){
+        case 'Service': {return cleanResult(find_in_object(table,{Service: attr})); }
+        case 'Status': {return cleanResult(find_in_object(table,{Status: attr})); }
 
-    $('.filter-results label').addClass('js-hidden').removeClass('select');
-    $('.filter-form input[type=checkbox]').prop('checked', false);
-    count = 0;
-
-    docs.forEach(function (doc) {
-        for(i=0; i<inputs.length; i++) {
-            if(doc == inputs[i].getAttribute('search')) {
-                $('label[for="'+ inputs[i].id+ '"').removeClass('js-hidden');
-            }
+        default : console.log('Key Error:' +givenkey);
+    }
+    function cleanResult(result){
+        var cleanArray=[];
+        for(var i=0;i<result.length;i++){
+            cleanArray.push(result[i]);
         }
-    });
-}
+        return cleanArray;
+    }
+    function find_in_object(my_object, my_criteria){
 
-// New (with table) Filters page search control
-function searchTable() {
-    var q = $('#search-table-form input').val();
-
-    var docs = searchStringInArray(q.toLowerCase());
-    var tableRows = $('.filter-results tbody tr');
-
-    tableRows.addClass('js-hidden').removeClass('select');
-    //$('.filter-form input[type=checkbox]').prop('checked', false);
-    count = 0;
-    if(docs.length == 0){
-        $('#no_results').removeClass('js-hidden');
-    } else {
-        docs.forEach(function (doc) {
-            for (i = 0; i < tableRows.length; i++) {
-                if (doc == tableRows[i].getAttribute('search')) {
-                    $(tableRows[i]).removeClass('js-hidden');
-                }
-            }
+        return my_object.filter(function(obj) {
+            return Object.keys(my_criteria).every(function(c) {
+                return obj[c].replace(/ /g,'') == my_criteria[c];
+            });
         });
-        $('#no_results').removeClass('js-hidden').addClass('js-hidden');
+
     }
 }
 
-$("a.add").click(function() {
-    $(this).addClass('js-hidden');
-    $(this).closest("tr").find('a.remove').removeClass('js-hidden');
-    var removeid= $(this).closest("tr").find('a.remove').id;
-    var doc = $(this).closest("tr").attr('search');
+function filterTable(){
+    var filteredTable=[];
+    var unchecked=true;
+    $('input[type=checkbox]').each(function () {
+        if(this.checked) {
+            filteredTable.push(get_filtered_table(table_data, this.name, this.value));
+            unchecked=false;
+        }
 
-    $("#selected-docs-list").append('<li id="'+doc.replace(/ |\(|\)|,/g, "_")+'">'+doc+'</li>');
-    selectedDocCountTable++;
-    $('#selected-count-table1').text(""+selectedDocCountTable);
-    $('#selected-count-table2').text(""+selectedDocCountTable);
-});
-
-$("a.remove").click(function() {
-    console.log('hello');
-    $(this).addClass('js-hidden');
-    $(this).closest("tr").find('a.add').removeClass('js-hidden');
-    var doc = $(this).closest("tr").attr('search');
-
-    $("#"+doc.replace(/ |\(|\)|,/g, "_")).remove();
-
-    selectedDocCountTable--;
-    $('#selected-count-table1').text(""+selectedDocCountTable);
-    $('#selected-count-table2').text(""+selectedDocCountTable);
-});
-
-function remove_link(doc) {
-    console.log('hello'+ doc);
-    $('tr[search="' + doc + '"]').closest("tr").find('a.remove4').addClass('js-hidden');
-    $('tr[search="' + doc + '"]').closest("tr").find('a.add4').removeClass('js-hidden');
-
-    $("#"+doc.replace(/ |\(|\)|,/g, "_")).remove();
-
-    selectedDocCountTable--;
-    $('#selected-count-table1').text(""+selectedDocCountTable);
-    $('#selected-count-table2').text(""+selectedDocCountTable);
-
-
+    });
+    if(unchecked){
+        return populateTable(table_data);
+    }
+    else {
+        var collectedResult = [];
+        for (var i = 0; i < filteredTable.length; i++) {
+            for (var j = 0; j < filteredTable[0].length; j++) {
+                collectedResult.push(filteredTable[i][j]);
+            }
+        }
+        return populateTable(collectedResult);
+    }
 }
 
-$("a.add4").click(function() {
-    $(this).addClass('js-hidden');
-    $(this).closest("tr").find('a.remove4').removeClass('js-hidden');
-    var removeid= $(this).closest("tr").find('a.remove4').id;
-    var doc = $(this).closest("tr").attr('search');
 
-    $("#selected-docs-list").append('<li id="'+doc.replace(/ |\(|\)|,/g, "_")+'">'+doc+
-    ' </br> <a class="remove_link button" id="remove_link" doc="'+doc.replace(/ |\(|\)|,/g, "_")+'" onclick="remove_link(\''+doc+'\')">Remove</a></li>');
-    selectedDocCountTable++;
-    $('#selected-count-table1').text(""+selectedDocCountTable);
-    $('#selected-count-table2').text(""+selectedDocCountTable);
-});
-
-$("a.remove4").click(function() {
-    $(this).addClass('js-hidden');
-    $(this).closest("tr").find('a.add4').removeClass('js-hidden');
-    var doc = $(this).closest("tr").attr('search');
-
-    $("#"+doc.replace(/ |\(|\)|,/g, "_")).remove();
-
-    selectedDocCountTable--;
-    $('#selected-count-table1').text(""+selectedDocCountTable);
-    $('#selected-count-table2').text(""+selectedDocCountTable);
-});
-//Filters 5
-
-function remove_link5(doc) {
-    $('tr[search="' + doc + '"]').closest("tr").find('a.remove5').addClass('js-hidden');
-    $('tr[search="' + doc + '"]').closest("tr").find('a.add5').removeClass('js-hidden');
-    console.log(doc.replace(/ |\(|\)/g, "_"));
-    $("#"+doc.replace(/ |\(|\)|,/g, "_")).remove();
-
-    selectedDocCountTable--;
-    $('#selected-count-table1').text(""+selectedDocCountTable);
-    $('#selected-count-table2').text(""+selectedDocCountTable);
-
-
-}
-$("a.add5").click(function() {
-    $(this).addClass('js-hidden');
-    $(this).closest("tr").find('a.remove5').removeClass('js-hidden');
-    var removeid= $(this).closest("tr").find('a.remove4').id;
-    var doc = $(this).closest("tr").attr('search');
-
-    var innerHTML = $('#selected_document_div').html();
-    innerHTML+='<div class="selected_Document" id="'+doc.replace(/ |\(|\)|,/g, "_")+'">'+doc+
-    ' </br> <a class="remove_link button" id="remove_link" onclick="remove_link5(\''+doc+'\')">Remove</a></div>';
-    $('#selected_document_div').html(innerHTML);
-    $('#selected_document_div2').html(innerHTML);
-
-    selectedDocCountTable++;
-    $('#selected-count-table1').text(""+selectedDocCountTable);
-    $('#selected-count-table2').text(""+selectedDocCountTable);
-});
-
-$("a.remove5").click(function() {
-    $(this).addClass('js-hidden');
-    $(this).closest("tr").find('a.add5').removeClass('js-hidden');
-    var doc = $(this).closest("tr").attr('search');
-    $("#"+doc.replace(/ |\(|\)|,/g, "_")).remove();
-
-    selectedDocCountTable--;
-    $('#selected-count-table1').text(""+selectedDocCountTable);
-    $('#selected-count-table2').text(""+selectedDocCountTable);
-});
-
-$('select').on('change', function (e) {
-    var optionSelected = $("option:selected", this);
-    var valueSelected = this.value.toLowerCase();
-    console.log(valueSelected);
-    clearTableSelection();
-    $(".filter-results tr").removeClass('js-hidden');
-    $(".filter-results tr[category="+valueSelected+"]").addClass('select');
-    $( ".filter-results tbody tr" ).not( ".select" ).addClass('js-hidden');
-});

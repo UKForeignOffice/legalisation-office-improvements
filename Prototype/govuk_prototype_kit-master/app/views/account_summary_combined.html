@@ -1,0 +1,78 @@
+{{<layout}}
+
+{{$pageTitle}}
+My legalisation account
+{{/pageTitle}}
+
+{{$content}}
+
+<main id="content" role="main">
+    {{>pagehead}}
+
+
+    <h1 class="heading-large">My legalisation account</h1>
+
+    <p><a href="application_form_type" class="link-back">Sign out</a></p>
+    <p><a href="account_start_application" class="button">Start new application</a></p>
+
+    <div class="filter-form column-quarter">
+
+
+        <div class="inner-block" id="search-block">
+            <div class="container-head">Search <a href="#" class="link" style="float: right;font-weight: normal; font-size:16px;">Clear Results</a></div>
+            <div class="container">
+                <form id="search-form" action="#">
+                    <label for="search-filter" class="visuallyhidden"></label>
+                    <input type="text" name="q" id="search-filter" title="Search">
+                </form>
+            </div>
+        </div>
+
+        <div class="inner-block" id="service-filter-block">
+            <div class="container-head">Service <a href="javascript:clearSelection()" class="link" style="float: right;font-weight: normal; font-size:16px;">Clear Selection</a></div>
+            <div class="container">
+                <ul>
+                    <li><label for="standard-checkbox"><input id="standard-checkbox" type="checkbox" value="Standard" name="Service">Standard Service <span style="float: right;">(3)</span></label></li>
+                    <li><label for="premium-checkbox"><input id="premium-checkbox" type="checkbox" value="Premium" name="Service">Premium Service <span style="float: right;">(3)</span></label></li>
+                    <li><label for="dropoff-checkbox"><input id="dropoff-checkbox" type="checkbox" value="Drop-off" name="Service">Drop-off Service <span style="float: right;">(3)</span></label></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="inner-block" id="status-filter-block">
+            <div class="container-head">Status <a href="javascript:clearSelection()" class="link" style="float: right;font-weight: normal; font-size:16px;">Clear Selection</a></div>
+            <div class="container">
+                <ul>
+                    <li><label for="inprogress-checkbox"><input id="inprogress-checkbox" type="checkbox" value="InProgress" name="Status">In Progress  <span style="float: right;">(6)</span></label></li>
+                    <li><label for="complete-checkbox"><input id="complete-checkbox" type="checkbox" value="Complete" name="Status">Complete <span style="float: right;">(3)</span></label></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="filter-results">
+    <table id="summary-standard" class="acc-summary-table-combined">
+        <thead>
+        <tr>
+            <th class="acc-summary-table-cell-date">Date</th>
+            <th class="acc-summary-table-cell-service">Service</th>
+            <th class="acc-summary-table-cell-name">Name</th>
+            <th class="acc-summary-table-cell-ref">Reference</th>
+            <th class="acc-summary-table-cell-status">Status</th>
+            <th class="acc-summary-table-cell-link">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    </div>
+
+
+</main>
+
+{{/content}}
+
+{{/layout}}

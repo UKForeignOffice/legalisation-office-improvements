@@ -1,0 +1,98 @@
+
+{{<layout}}
+
+{{$pageTitle}}
+Create an account
+{{/pageTitle}}
+
+{{$content}}
+
+<main id="content" role="main">
+    {{>pagehead}}
+    <h1 class="heading-xlarge">Create an account</h1>
+
+    </div>
+    <div class="form-group">
+        <label for="email" class="form-label-bold">Email address</label>
+        <span class="form-hint">You will use this address to sign in</span>
+        <input class="form-control" id="email" name="email" type="text">
+        <div id="email_hint" style="display: none;"></div>
+    </div>
+    <div class="form-group" id="confirm_email_div">
+        <label for="email-confirm" class="form-label-bold">Confirm email address</label>
+        <div class="error_message" id="email_confirm_hint" style="display: none;"></div>
+        <input class="form-control" id="email-confirm" type="text">
+    </div>
+
+    <div class="form-group">
+        <label for="password"  class="form-label-bold">Create a password</label>
+        <span class="form-hint">You'll need this to login to your account</span>
+        <input class="form-control" id="password" type="text">
+    </div>
+    <div class="form-group">
+        <label for="password-confirm"  class="form-label-bold">Confirm password</label>
+        <input class="form-control" id="password-confirm" type="text">
+    </div>
+
+    <div class="form-group intl-tel-input">
+        <label for="phone" class="form-label-bold">Telephone number</label>
+        <span class="form-hint">Can be landline or mobile. Find your international code from the selector</span>
+        <input type="tel" id="phone" class="form-control" autocomplete="off"  style="width: 100%">
+    </div>
+
+    <div class="form-group">
+        <label class="form-label" for="postcode">Postcode</label>
+        <input class="form-control-1-8 postcode" id="postcode" type="text">
+    </div>
+
+    <div class="form-group">
+        <a class="button find-address" id="find-address">Find address</a>
+        <div class="js-hidden" id="address-list-group">
+            <label class="form-label visuallyhidden" for="address-list">Pick an address</label>
+            <select class="form-select" id="address-list" name="address">
+                <option value="0">Please select your address</option>
+                <option value="1">30A Culver Road, St Albans</option>
+                <option value="2">31A Culver Road, St Albans</option>
+                <option value="3">32A Culver Road, St Albans</option>
+                <option value="4">33A Culver Road, St Albans</option>
+                <option value="5">34A Culver Road, St Albans</option>
+                <option value="6">35A Culver Road, St Albans</option>
+            </select>
+        </div>
+        <a class="link address-manual" id="address-manual">Enter your address manually</a>
+    </div>
+
+    <div class="form-group js-hidden" id="address-details-group">
+        <label class="form-label">Street</label>
+        <p><input class="form-control" type="text" id="address1"></p>
+        <p><input class="form-control" type="text"></p>
+        <p><input class="form-control" type="text"></p>
+
+        <div class="form-group">
+            <label class="form-label">Town</label>
+            <input class="form-control" type="text" id="town">
+        </div>
+        <div class="form-group">
+            <label class="form-label">County (optional)</label>
+            <input class="form-control" type="text" id="county">
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Country</label>
+            <select class="form-select country" type="tel" id="country"></select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <a href="account_summary_combined" class="button">Create account</a>
+        <p><a href="application_form_type" class="link-back">Back</a></p>
+
+    </div>
+
+</main>
+
+{{/content}}
+
+{{/layout}}
+
+<script src="/public/javascripts/jquery-ui.js"></script>
